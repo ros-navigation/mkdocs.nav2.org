@@ -354,9 +354,8 @@ Description
 Description
 :   Distance (m) from the dock pose to ignore collisions, i.e. the robot will not check for collisions within this distance from the dock pose, as the robot will make contact with the dock. Set to `0.0` when physical contact is not made with a dock.
 
-    !!! note
-
-        `dock_plugins` and either `docks` or `dock_database` are required.
+Note
+:   `dock_plugins` and either `docks` or `dock_database` are required.
 
 ## SimpleChargingDock Parameters
 
@@ -470,9 +469,8 @@ Description
 Description
 :   Pitch offset from detected pose for docking pose (rad).
 
-    !!! note
-
-        The external detection rotation angles are setup to work out of the box with Apriltags detectors in *image_proc* and *isaac_ros*.
+Note
+:   The external detection rotation angles are setup to work out of the box with Apriltags detectors in *image_proc* and *isaac_ros*.
 
 ### **`<dock_name>.external_detection_rotation_roll`**
 
@@ -483,9 +481,8 @@ Description
 Description
 :   Roll offset from detected pose for docking pose (rad).
 
-    !!! note
-
-        The external detection rotation angles are setup to work out of the box with Apriltags detectors in *image_proc* and *isaac_ros*.
+Note
+:   The external detection rotation angles are setup to work out of the box with Apriltags detectors in *image_proc* and *isaac_ros*.
 
 ### **`<dock_name>.filter_coef`**
 
@@ -568,9 +565,8 @@ Description
 Description
 :   Enables backward docking without requiring a sensor for detection during the final approach. When enabled, the robot approaches the staging pose facing forward with sensor coverage for dock detection; after detection, it rotates and backs into the dock using only the initially detected pose for dead reckoning. In the undocking phase, the robot will move forward to the staging pose and then rotate to the original heading. This may also be paired with sensor detection in the reverse direction as well if available.
 
-    !!! note
-
-        This parameter is only valid when the `dock_direction` is set to "backward".
+Note
+:   This parameter is only valid when the `dock_direction` is set to "backward".
 
 ## Example
 

@@ -73,9 +73,8 @@ Description
 Description
 :   A plugin to define tasks to be executed when robot arrives to a waypoint.
 
-    !!! note
-
-        The plugin namespace defined needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
+Note
+:   The plugin namespace defined needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
 
     Example:
     ```yaml

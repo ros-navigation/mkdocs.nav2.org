@@ -64,9 +64,8 @@ Description
 Description
 :   Minimum velocities (m/s) in `[x, y, theta]` axes or `[x, y, z, roll, pitch, yaw]` for full 6-DoF support. This is **signed** and thus must be **negative** to reverse.
 
-    !!! note
-
-        Rotational velocities negative direction is a right-hand turn, so this should always be negative regardless of reversing preference.
+Note
+:   Rotational velocities negative direction is a right-hand turn, so this should always be negative regardless of reversing preference.
 
 ### **`deadband_velocity`**
 

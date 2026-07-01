@@ -43,14 +43,12 @@ The process is simple and is as follow:
 2. If this ticket, or another existing ticket, is something you would like to work on, comment in the ticket claiming ownership over it. It would be helpful at this time if you declared a strategy and a timeline for planning purposes of other folks working around you. Over time, update the ticket with progress of key markers and engage in any constructive feedback maintainers or other users may have.
 3. Once you've completed the task you set out to complete, submit a PR! Please fill out the PR template in complete to ensure that we have a full understanding of your work. At that point, 1-2 reviewers will take a look at your work and give it some feedback to be merged into the codebase. For trivial changes, a single maintainer may merge it after review if they're happy with it, up to their discretion. Any substantial changes should be approved by at least 1 maintainer and 1 other community member.
 
-!!! warning "Important"
-
-    We take code quality seriously and strive for high-quality and consistent code.
-    We make use of the linting and static analysis tools provided in ROS 2 (`ament_cpplint`, `ament_uncrustify`, `ament_cppcheck`, etc).
-    All PRs are built in CI with the appropriate ROS distributions and run through a set of unit and system level tests including static analysis.
-    You can see the results of these tests in the pull request.
-    It is expected for feature development for tests to cover this work to be added.
-    If any documentation must be updated due to your changes, that should be included in your pull request.
+Note: We take code quality seriously and strive for high-quality and consistent code.
+We make use of the linting and static analysis tools provided in ROS 2 (`ament_cpplint`, `ament_uncrustify`, `ament_cppcheck`, etc).
+All PRs are built in CI with the appropriate ROS distributions and run through a set of unit and system level tests including static analysis.
+You can see the results of these tests in the pull request.
+It is expected for feature development for tests to cover this work to be added.
+If any documentation must be updated due to your changes, that should be included in your pull request.
 
 ## Licensing
 

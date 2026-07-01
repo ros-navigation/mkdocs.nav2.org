@@ -257,9 +257,8 @@ Description
 Description
 :   List of mapped plugin names for parameter namespaces and names.
 
-    !!! note
-
-        Each plugin namespace defined in this list needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
+Note
+:   Each plugin namespace defined in this list needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
 
     Example:
     ```yaml
@@ -283,9 +282,8 @@ Description
 Description
 :   List of mapped costmap filter names for parameter namespaces and names.
 
-    !!! note
-
-        Costmap filters are also loadable plugins just as ordinary costmap layers. This separation is made to avoid plugin and filter interference and places these filters on top of the combined layered costmap. As  with plugins, each costmap filter namespace defined in this list needs to have a `plugin` parameter defining the type of filter plugin to be loaded in the namespace.
+Note
+:   Costmap filters are also loadable plugins just as ordinary costmap layers. This separation is made to avoid plugin and filter interference and places these filters on top of the combined layered costmap. As  with plugins, each costmap filter namespace defined in this list needs to have a `plugin` parameter defining the type of filter plugin to be loaded in the namespace.
 
     Example:
     ```yaml

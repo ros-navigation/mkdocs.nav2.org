@@ -24,9 +24,8 @@ Description
 Description
 :   List of mapped costmap layer names for parameter namespaces and names.
 
-    !!! note
-
-        Costmap filters are presently unsupported.
+Note
+:   Costmap filters are presently unsupported.
 
 ## Example
 

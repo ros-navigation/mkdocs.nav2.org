@@ -53,9 +53,8 @@ Description
 Description
 :   List of mapped names for controller plugins for processing requests and parameters.
 
-    !!! note
-
-        Each plugin namespace defined in this list needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
+Note
+:   Each plugin namespace defined in this list needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
 
     Example:
     ```yaml
@@ -75,9 +74,8 @@ Description
 Description
 :   Mapped name for progress checker plugin for checking progress made by robot.
 
-    !!! note
-
-        The plugin namespace defined needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
+Note
+:   The plugin namespace defined needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
 
     Example:
     ```yaml
@@ -97,9 +95,8 @@ Description
 Description
 :   Mapped name for goal checker plugin for checking goal is reached. When the number of the plugins is more than 2, each `FollowPath` action needs to specify the goal checker plugin name with its `goal_checker_id` field.
 
-    !!! note
-
-        The plugin namespace defined needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
+Note
+:   The plugin namespace defined needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
 
     Example:
     ```yaml
@@ -119,9 +116,8 @@ Description
 Description
 :   Mapped name for path handler plugin for processing path from the planner. When the number of the plugins is more than 2, each `FollowPath` action needs to specify the path handler plugin name with its `path_handler_id` field.
 
-    !!! note
-
-        The plugin namespace defined needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
+Note
+:   The plugin namespace defined needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
 
     Example:
     ```yaml
