@@ -34,7 +34,9 @@ Using the [Rotation Shim Controller][rotation-shim-controller], a robot will sim
 
 This was added due to quirks in some existing controllers whereas tuning the controller for a task can make it rigid – or the algorithm simply doesn't rotate in place when working with holonomic paths (if that's a desirable trait). The result is an awkward, stuttering, or whipping around behavior when your robot's initial and path heading's are significantly divergent. Giving a controller a better starting point to start tracking a path makes tuning the controllers significantly easier and creates more intuitive results for on-lookers (in one maintainer's opinion).
 
-Note: If using a non-holonomic, kinematically feasible planner (e.g. Smac Hybrid-A\*, Smac State Lattice), this is not a necessary behavioral optimization. This class of planner will create plans that take into account the robot's starting heading, not requiring any rotation behaviors.
+!!! note
+
+    If using a non-holonomic, kinematically feasible planner (e.g. Smac Hybrid-A\*, Smac State Lattice), this is not a necessary behavioral optimization. This class of planner will create plans that take into account the robot's starting heading, not requiring any rotation behaviors.
 
 This behavior is most optimally for:
 
@@ -177,7 +179,9 @@ In addition, costmap filters:
 - `SpeedFilter`: Reduces or increases robot speeds based on position
 - `BinaryFilter`: Enables or disables a binary topic when in particular zones
 
-Note: When the costmap filters can be paired with the `VectorObject` server to use vectorized zones rather than map rastered zones sharing the same software.
+!!! note
+
+    When the costmap filters can be paired with the `VectorObject` server to use vectorized zones rather than map rastered zones sharing the same software.
 
 ## Symmetric Yaw Tolerance
 

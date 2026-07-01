@@ -314,8 +314,9 @@ Description
 Description
 :   Whether to enable rotating to rough heading and goal orientation when using holonomic planners. Recommended on for all robot types that can rotate in place.
 
-Note
-:   both `use_rotate_to_heading` and `allow_reversing` cannot be set to `true` at the same time as it would result in ambiguous situations.
+    !!! note
+
+        Both `use_rotate_to_heading` and `allow_reversing` cannot be set to `true` at the same time as it would result in ambiguous situations.
 
 ### **`allow_reversing`**
 
@@ -362,8 +363,9 @@ Description
 Description
 :   Interpolate a carrot after the goal dedicated to the curvate calculation (to avoid oscilaltions at the end of the path). For visualization, it will be published on the `/curvature_lookahead_point` topic similarly to `/lookahead_point`
 
-Note
-:   Needs `use_fixed_curvature_lookahead` to be `true`
+    !!! note
+
+        Needs `use_fixed_curvature_lookahead` to be `true`
 
 ### **`allow_parameter_qos_overrides`**
 

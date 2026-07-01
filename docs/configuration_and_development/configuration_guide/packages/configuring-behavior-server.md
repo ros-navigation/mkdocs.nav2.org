@@ -5,7 +5,9 @@ Source code on [Github](https://github.com/ros-navigation/navigation2/tree/main/
 The Behavior Server implements the server for handling various behavior, such as recoveries and docking, requests and hosting a vector of plugins implementing various C++ behaviors.
 It is also possible to implement independent behavior servers for each custom behavior, but this server will allow multiple behaviors to share resources such as costmaps and TF buffers to lower incremental costs for new behaviors.
 
-Note: the wait recovery behavior has no parameters, the duration to wait is given in the action request.
+!!! note
+
+    The wait recovery behavior has no parameters, the duration to wait is given in the action request.
 
 ## Behavior Server Parameters
 
@@ -108,9 +110,9 @@ Description
 Description
 :   List of plugin names to use, also matches action server names.
 
-Note
-:   Each plugin namespace defined in this list needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
-    <br/>
+    !!! note
+
+        Each plugin namespace defined in this list needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
 
     Example:
 

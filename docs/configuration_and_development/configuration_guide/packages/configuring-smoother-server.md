@@ -52,8 +52,9 @@ Description
 Description
 :   List of plugin names to use, also matches action server names.
 
-Note
-:   Each plugin namespace defined in this list needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
+    !!! note
+
+        Each plugin namespace defined in this list needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
 
     Example:
     ```yaml

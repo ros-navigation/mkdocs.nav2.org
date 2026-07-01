@@ -17,8 +17,9 @@ It also hosts the global costmap.
 Description
 :   List of Mapped plugin names for parameters and processing requests.
 
-Note
-:   Each plugin namespace defined in this list needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
+    !!! note
+
+        Each plugin namespace defined in this list needs to have a `plugin` parameter defining the type of plugin to be loaded in the namespace.
 
     Example:
     ```yaml
