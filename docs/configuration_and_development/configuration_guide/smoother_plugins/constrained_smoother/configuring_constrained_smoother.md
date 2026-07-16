@@ -96,7 +96,7 @@ Type: `double` Default: `2.5`
 
 ### **`cost_check_points`**
 
-Type: `array of double` Default: `[]`
+Type: `vector<double>` Default: `[]`
 
 :   Points in robot frame to grab costmap values from. Format: [x1, y1, weight1, x2, y2, weight2, ...].
 
