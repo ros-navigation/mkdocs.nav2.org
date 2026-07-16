@@ -129,19 +129,19 @@ Type: `string` Default: `"SPARSE_NORMAL_CHOLESKY"`
 
 ### **`optimizer.gradient_tol`**
 
-Type: `bool` Default: `1e-10`
+Type: `double` Default: `1e-10`
 
 :   Gradient tolerance optimization termination criterion
 
 ### **`optimizer.fn_tol`**
 
-Type: `bool` Default: `1e-7`
+Type: `double` Default: `1e-7`
 
 :   Function tolerance optimization termination criterion
 
 ### **`optimizer.param_tol`**
 
-Type: `bool` Default: `1e-15`
+Type: `double` Default: `1e-15`
 
 :   Parameter tolerance optimization termination criterion
 
