@@ -20741,7 +20741,8 @@ Remove any EOL distributions at this time.</p>
 <p>In the <code>mergify.yml</code> file, add a new backport automation for the new distribution. Make to to create the tag in GitHub's UX as well for later use.</p>
 <p>Finally, create the new distribution branch from <code>main</code> and push to the server.
 Go into the GitHub Actions tab on <code>nav2_docker</code> and retrigger its build job.
-The nightly and release jobs should now exist for the new distribution and return successfully (validate this).</p>
+The nightly jobs should now exist for the new distribution and return successfully (validate this).
+The release jobs will fail until Bloom is run to obtain the tagged version to build and release in Step 9.</p>
 <h2 id="5-mark-branch-as-protected">5. Mark Branch as Protected<a class="headerlink" href="#5-mark-branch-as-protected" title="Permanent link"></a></h2>
 <p>Go to the Repo Settings -&gt; Branches. Create a branch protection rule for the new branch that matches the last.</p>
 <ul>
@@ -20796,7 +20797,8 @@ Once the job turns over, revert this commit to reintroduce the error.</p>
 <h2 id="11-announcements">11. Announcements<a class="headerlink" href="#11-announcements" title="Permanent link"></a></h2>
 <p>Finally, we can announce the updates!
 Create a new migration guide page on the Nav2 website for contributors to populate with notable changes in the next distribution cycle.
-Update the Roadmap page with a new table of projects and features to be added over the next distribution.</p>
+Update the Roadmap page with a new table of projects and features to be added over the next distribution.
+Update landing page with new distribution art in the table (and update status of other distros)</p>
 <p>Make announcements on Slack, ROS Discourse, and LinkedIn to announce the new distribution and its major new features.
 Gifs, videos, and images are always welcome to be included in the announcements!</p>
 <p>Identify tickets to address or PRs to merge for the next distribution.
