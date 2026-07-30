@@ -1,0 +1,25 @@
+[dir="ltr"] .md-version__current {
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-left: 0;
+  line-height: 2.4rem;
+}
+
+.md-version__list {
+  color: var(--color-nav2-gray);
+  background-color: #daf2f8;
+  margin: 0 0;
+  border-radius: 0.8rem;
+  top: 0.5rem;
+  right: 0.2rem;
+}
+
+.md-version__item {
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+[dir="ltr"] .md-version__link {
+  padding: 0.5rem 1.2rem;
+}
