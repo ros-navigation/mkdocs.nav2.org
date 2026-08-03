@@ -20138,6 +20138,17 @@ SUVORK5CYII=
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#collision-monitor-exclusion-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collision Monitor exclusion zones
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -21841,6 +21852,17 @@ SUVORK5CYII=
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#collision-monitor-exclusion-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collision Monitor exclusion zones
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -22742,6 +22764,16 @@ Changing the inscribed radius can have serious implications on the robot's safet
 This parameter is intended only for controllers that are customized explicitly to use such data.
 It is <strong>not</strong> intended for global path planners or setups that depend on the footprint-based inscribed radius.</p>
 <p>See the <a class="autorefs autorefs-internal" href="../../../configuration_guide/core_servers/costmap_2d/costmap_plugins/inflation/#inflation-layer-parameters">Inflation Layer Parameters</a> for full parameter documentation.</p>
+<h2 id="collision-monitor-exclusion-zones">Collision Monitor exclusion zones<a class="headerlink" href="#collision-monitor-exclusion-zones" title="Permanent link"></a></h2>
+<p><a href="https://github.com/ros-navigation/navigation2/pull/6233">PR #6233</a> adds per-source exclusion zones to Collision Monitor and Collision Detector.
+An exclusion zone masks out data points falling inside a polygon or circle before they are checked against the collision polygons, e.g. to ignore a docking station the robot must approach closely, or to self-filter robot body points from a source.
+A zone can be anchored to an arbitrary TF <code>frame_id</code> (e.g. <code>dock_link</code>), so it tracks that frame as the robot moves, with an optional height band for 3D sources.
+Zones fail safe: if the zone frame transform is unavailable, no points are excluded.</p>
+<p>See:</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="../../../configuration_guide/core_servers/collision_monitor/configuring_collision_monitor_node/#collision-monitor-node">Collision Monitor Node</a></li>
+<li><a class="autorefs autorefs-internal" href="../../../configuration_guide/core_servers/collision_monitor/configuring_collision_detector_node/#collision-detector-node">Collision Detector Node</a></li>
+</ul>
 
 
 
