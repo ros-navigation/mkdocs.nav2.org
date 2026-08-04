@@ -17,8 +17,8 @@ For a full list of important completed changes in the project, see the Migration
 
 ## Lyrical Roadmap
 
-- [x] :roadmap-size-large: :roadmap-note-in-progress: - Controller Server and Plugin factor for centralized path handling and crosstrack error estimation and enforcement.
-- [x] :roadmap-size-large: :roadmap-note-in-progress: - Massive refactor of `rclcpp` types to `nav2` types for ROS API abstraction.
+- [x] :roadmap-size-large: - Controller Server and Plugin factor for centralized path handling and crosstrack error estimation and enforcement.
+- [x] :roadmap-size-large: - Massive refactor of `rclcpp` types to `nav2` types for ROS API abstraction.
 - [x] :roadmap-size-medium: - Improve dynamic feasibility on approach to goal on all control and behavior plugins.
 - [x] :roadmap-size-medium: - Introduce Vector Object Server to augment Costmap Filters with polygons rather than annotated masks.
 - [ ] :roadmap-size-medium: :roadmap-note-incomplete: - [Continued Route Server][]
