@@ -20149,6 +20149,17 @@ SUVORK5CYII=
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#behavior-tree-action-request-error-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior Tree action request error reporting
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -21911,6 +21922,17 @@ SUVORK5CYII=
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#behavior-tree-action-request-error-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior Tree action request error reporting
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -22822,6 +22844,15 @@ Zones fail safe: if the zone frame transform is unavailable, no points are exclu
 <li><a class="autorefs autorefs-internal" href="../../../configuration_guide/core_servers/collision_monitor/configuring_collision_monitor_node/#collision-monitor-node">Collision Monitor Node</a></li>
 <li><a class="autorefs autorefs-internal" href="../../../configuration_guide/core_servers/collision_monitor/configuring_collision_detector_node/#collision-detector-node">Collision Detector Node</a></li>
 </ul>
+<h2 id="behavior-tree-action-request-error-reporting">Behavior Tree action request error reporting<a class="headerlink" href="#behavior-tree-action-request-error-reporting" title="Permanent link"></a></h2>
+<p><a href="https://github.com/ros-navigation/navigation2/pull/6289">PR #6289</a> updates <code>BtActionNode</code> so that failures while requesting an action goal can be reported through the behavior tree. The base node now provides the <code>error_code_id</code> and <code>error_msg</code> output ports and handles the following callbacks:</p>
+<ul>
+<li><code>on_timeout</code></li>
+<li><code>on_goal_rejected</code></li>
+<li><code>on_send_goal_failure</code></li>
+</ul>
+<p>The Nav2 action definitions now include <code>GOAL_REJECTED=1</code> and <code>SEND_GOAL_FAILURE=2</code> error codes. Action definitions that support timeout handling also define a <code>TIMEOUT</code> error code. These codes are written to the <code>error_code_id</code> output and the corresponding reason is written to <code>error_msg</code> when the action request or execution fails.</p>
+<p>Custom action definitions used with <code>BtActionNode</code> should add the new error codes to their result definitions. Custom BT action nodes should remove duplicate <code>error_code_id</code> and <code>error_msg</code> output ports and <code>on_timeout</code> overrides that only provide this common behavior. Override <code>on_goal_rejected</code> or <code>on_send_goal_failure</code> when custom handling is required. If an action definition does not provide one of the standard codes, <code>BtActionNode</code> uses <code>UNKNOWN</code> when available and warns during construction.</p>
 
 
 
