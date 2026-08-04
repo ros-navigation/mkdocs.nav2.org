@@ -96,6 +96,8 @@
     
       <link rel="stylesheet" href="../../../../assets/stylesheets/watermark.css">
     
+      <link rel="stylesheet" href="../../../../assets/stylesheets/version_selector.css">
+    
     <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -20136,6 +20138,28 @@ SUVORK5CYII=
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#collision-monitor-exclusion-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collision Monitor exclusion zones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior-tree-action-request-error-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior Tree action request error reporting
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -20406,6 +20430,8 @@ SUVORK5CYII=
       
         
       
+        
+      
     
     
 
@@ -20569,6 +20595,52 @@ SUVORK5CYII=
   <!-- Typeset title -->
   
     ROS Distribution Sync Process
+  
+
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link to encrypted content -->
+  
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../../../community/maintainer_docs/docs_release/" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    
+
+  <!-- Typeset title -->
+  
+    Docs Distribution Release Process
   
 
 
@@ -21839,6 +21911,28 @@ SUVORK5CYII=
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#collision-monitor-exclusion-zones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Collision Monitor exclusion zones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior-tree-action-request-error-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Behavior Tree action request error reporting
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -22740,6 +22834,25 @@ Changing the inscribed radius can have serious implications on the robot's safet
 This parameter is intended only for controllers that are customized explicitly to use such data.
 It is <strong>not</strong> intended for global path planners or setups that depend on the footprint-based inscribed radius.</p>
 <p>See the <a class="autorefs autorefs-internal" href="../../../configuration_guide/core_servers/costmap_2d/costmap_plugins/inflation/#inflation-layer-parameters">Inflation Layer Parameters</a> for full parameter documentation.</p>
+<h2 id="collision-monitor-exclusion-zones">Collision Monitor exclusion zones<a class="headerlink" href="#collision-monitor-exclusion-zones" title="Permanent link"></a></h2>
+<p><a href="https://github.com/ros-navigation/navigation2/pull/6233">PR #6233</a> adds per-source exclusion zones to Collision Monitor and Collision Detector.
+An exclusion zone masks out data points falling inside a polygon or circle before they are checked against the collision polygons, e.g. to ignore a docking station the robot must approach closely, or to self-filter robot body points from a source.
+A zone can be anchored to an arbitrary TF <code>frame_id</code> (e.g. <code>dock_link</code>), so it tracks that frame as the robot moves, with an optional height band for 3D sources.
+Zones fail safe: if the zone frame transform is unavailable, no points are excluded.</p>
+<p>See:</p>
+<ul>
+<li><a class="autorefs autorefs-internal" href="../../../configuration_guide/core_servers/collision_monitor/configuring_collision_monitor_node/#collision-monitor-node">Collision Monitor Node</a></li>
+<li><a class="autorefs autorefs-internal" href="../../../configuration_guide/core_servers/collision_monitor/configuring_collision_detector_node/#collision-detector-node">Collision Detector Node</a></li>
+</ul>
+<h2 id="behavior-tree-action-request-error-reporting">Behavior Tree action request error reporting<a class="headerlink" href="#behavior-tree-action-request-error-reporting" title="Permanent link"></a></h2>
+<p><a href="https://github.com/ros-navigation/navigation2/pull/6289">PR #6289</a> updates <code>BtActionNode</code> so that failures while requesting an action goal can be reported through the behavior tree. The base node now provides the <code>error_code_id</code> and <code>error_msg</code> output ports and handles the following callbacks:</p>
+<ul>
+<li><code>on_timeout</code></li>
+<li><code>on_goal_rejected</code></li>
+<li><code>on_send_goal_failure</code></li>
+</ul>
+<p>The Nav2 action definitions now include <code>GOAL_REJECTED=1</code> and <code>SEND_GOAL_FAILURE=2</code> error codes. Action definitions that support timeout handling also define a <code>TIMEOUT</code> error code. These codes are written to the <code>error_code_id</code> output and the corresponding reason is written to <code>error_msg</code> when the action request or execution fails.</p>
+<p>Custom action definitions used with <code>BtActionNode</code> should add the new error codes to their result definitions. Custom BT action nodes should remove duplicate <code>error_code_id</code> and <code>error_msg</code> output ports and <code>on_timeout</code> overrides that only provide this common behavior. Override <code>on_goal_rejected</code> or <code>on_send_goal_failure</code> when custom handling is required. If an action definition does not provide one of the standard codes, <code>BtActionNode</code> uses <code>UNKNOWN</code> when available and warns during construction.</p>
 
 
 
