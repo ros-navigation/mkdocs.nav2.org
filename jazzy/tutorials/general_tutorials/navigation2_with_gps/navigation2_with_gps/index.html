@@ -3481,7 +3481,7 @@ SUVORK5CYII=
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../../getting_started/quickstart/" class="md-nav__link">
+      <a href="../../../../getting_started/quickstart/quickstart/" class="md-nav__link">
         
   
 
@@ -5184,50 +5184,9 @@ SUVORK5CYII=
 
   <!-- Navigation item with nested items -->
   
-
-    <!-- Determine all nested items that are index pages -->
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../../../getting_started/quickstart/quickstart/" class="md-nav__link">
         
-          
-        
-      
-    
-    
-
-    <!-- Navigation tabs -->
-    
-
-      <!-- Render 1st level active item as section -->
-      
-
-      <!-- Navigation tabs + sections -->
-      
-
-    <!-- Navigation sections -->
-    
-
-    <!-- Navigation pruning -->
-    
-
-    <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-
-        <!-- Determine checked and indeterminate state -->
-        
-
-        <!-- Active checkbox expands items contained within nested section -->
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
-
-        <!-- Toggle to expand nested items -->
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../getting_started/quickstart/" class="md-nav__link ">
-              
   
 
   <!-- Navigation link icon -->
@@ -5253,39 +5212,8 @@ SUVORK5CYII=
   <!-- Navigation link status -->
   
 
-            </a>
-
-            <!-- Only render toggle if there's at least one more page -->
-            
-          </div>
-        
-
-        <!-- Nested navigation -->
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-
-  <!-- Typeset title -->
-  
-    Quickstart
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-
-            <!-- Nested navigation item -->
-            
-              
-            
-          </ul>
-        </nav>
-
-      <!-- Pruned navigation item -->
-      
+      </a>
     </li>
-
-  <!-- Currently active page -->
   
 
               
@@ -20270,7 +20198,7 @@ in overrides/partials/header.html -->
 <p>If some of the packages are not available by apt install, go to the respective projects and build from source.</p>
 <p>The code for this tutorial is hosted on <a href="https://github.com/ros-navigation/navigation2_tutorials/tree/jazzy/nav2_gps_waypoint_follower_demo">nav2_gps_waypoint_follower_demo</a>. Though we will go through the most important steps of the setup, it's highly recommended that you clone and build the package when setting up your dev environment.
 This is available in ROS 2 Iron and newer.</p>
-<p>You may also need to install gazebo and turtlebot3 simulation if you have not executed previous tutorials or Nav2 demos. See Nav2's <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/#quickstart">Quickstart</a> page for more information.</p>
+<p>You may also need to install gazebo and turtlebot3 simulation if you have not executed previous tutorials or Nav2 demos. See Nav2's <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/quickstart/#quickstart">Quickstart</a> page for more information.</p>
 <h2 id="gps-localization-overview">GPS Localization Overview<a class="headerlink" href="#gps-localization-overview" title="Permanent link"></a></h2>
 <p>GPS (Global Positioning System) or more broadly GNSS (Global Navigation Satellite System) is a technology that relies on satellites to provide receivers with an estimate of where they are located on the earth. These satellites are in orbit at altitudes around 20.000km and use radio frequency to continuously broadcast time signals, these are picked up by receivers when satellites are along their line of sight, they use trilateration to estimate their latitude, longitude and altitude.</p>
 <p>Commonly GPS devices calculate their position using the <a href="https://en.wikipedia.org/wiki/World_Geodetic_System">WGS84 standard</a>, which defines a cartesian system with its origin on the earth's center of mass, the <code>z</code> axis pointing north and the <code>x</code> axis pointing to the first meridian as the image below shows.</p>

@@ -3481,7 +3481,7 @@ SUVORK5CYII=
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../../getting_started/quickstart/" class="md-nav__link">
+      <a href="../../../../getting_started/quickstart/quickstart/" class="md-nav__link">
         
   
 
@@ -5184,50 +5184,9 @@ SUVORK5CYII=
 
   <!-- Navigation item with nested items -->
   
-
-    <!-- Determine all nested items that are index pages -->
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../../../getting_started/quickstart/quickstart/" class="md-nav__link">
         
-          
-        
-      
-    
-    
-
-    <!-- Navigation tabs -->
-    
-
-      <!-- Render 1st level active item as section -->
-      
-
-      <!-- Navigation tabs + sections -->
-      
-
-    <!-- Navigation sections -->
-    
-
-    <!-- Navigation pruning -->
-    
-
-    <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-
-        <!-- Determine checked and indeterminate state -->
-        
-
-        <!-- Active checkbox expands items contained within nested section -->
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
-
-        <!-- Toggle to expand nested items -->
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../getting_started/quickstart/" class="md-nav__link ">
-              
   
 
   <!-- Navigation link icon -->
@@ -5253,39 +5212,8 @@ SUVORK5CYII=
   <!-- Navigation link status -->
   
 
-            </a>
-
-            <!-- Only render toggle if there's at least one more page -->
-            
-          </div>
-        
-
-        <!-- Nested navigation -->
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-
-  <!-- Typeset title -->
-  
-    Quickstart
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-
-            <!-- Nested navigation item -->
-            
-              
-            
-          </ul>
-        </nav>
-
-      <!-- Pruned navigation item -->
-      
+      </a>
     </li>
-
-  <!-- Currently active page -->
   
 
               
@@ -20339,10 +20267,10 @@ plugins is handled by <code>pluginlib</code>.</p>
 <p>In the above snippet, you can observe the mapping of our <code>nav2_pure_pursuit_controller::PurePursuitController</code> controller to its id <code>FollowPath</code>.
 To pass plugin-specific parameters we have used <code>&lt;plugin_id&gt;.&lt;plugin_specific_parameter&gt;</code>.</p>
 <h3 id="4-run-pure-pursuit-controller-plugin">4. Run Pure Pursuit Controller plugin<a class="headerlink" href="#4-run-pure-pursuit-controller-plugin" title="Permanent link"></a></h3>
-<p>Run Turtlebot3 simulation with enabled Nav2. Detailed instructions on how to make it run are written at <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/#quickstart">Quickstart</a>. Below is a shortcut command for that:</p>
+<p>Run Turtlebot3 simulation with enabled Nav2. Detailed instructions on how to make it run are written at <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/quickstart/#quickstart">Quickstart</a>. Below is a shortcut command for that:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1">ros2<span class="w"> </span>launch<span class="w"> </span>nav2_bringup<span class="w"> </span>tb3_simulation_launch.py<span class="w"> </span>params_file:<span class="o">=</span>/path/to/your_params_file.yaml
 </span></code></pre></div>
-<p>Then goto RViz and click on the "2D Pose Estimate" button at the top and point the location on the map as it was described in <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/#quickstart">Quickstart</a>.
+<p>Then goto RViz and click on the "2D Pose Estimate" button at the top and point the location on the map as it was described in <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/quickstart/#quickstart">Quickstart</a>.
 The robot will localize on the map and then click on the "Nav2 goal" and click on the pose where you want your robot to navigate to.
 After that controller will make the robot follow the global path.</p>
 

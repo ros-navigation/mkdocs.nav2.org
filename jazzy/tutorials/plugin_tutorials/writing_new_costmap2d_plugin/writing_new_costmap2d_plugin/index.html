@@ -3481,7 +3481,7 @@ SUVORK5CYII=
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../../getting_started/quickstart/" class="md-nav__link">
+      <a href="../../../../getting_started/quickstart/quickstart/" class="md-nav__link">
         
   
 
@@ -5184,50 +5184,9 @@ SUVORK5CYII=
 
   <!-- Navigation item with nested items -->
   
-
-    <!-- Determine all nested items that are index pages -->
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../../../getting_started/quickstart/quickstart/" class="md-nav__link">
         
-          
-        
-      
-    
-    
-
-    <!-- Navigation tabs -->
-    
-
-      <!-- Render 1st level active item as section -->
-      
-
-      <!-- Navigation tabs + sections -->
-      
-
-    <!-- Navigation sections -->
-    
-
-    <!-- Navigation pruning -->
-    
-
-    <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-
-        <!-- Determine checked and indeterminate state -->
-        
-
-        <!-- Active checkbox expands items contained within nested section -->
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
-
-        <!-- Toggle to expand nested items -->
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../getting_started/quickstart/" class="md-nav__link ">
-              
   
 
   <!-- Navigation link icon -->
@@ -5253,39 +5212,8 @@ SUVORK5CYII=
   <!-- Navigation link status -->
   
 
-            </a>
-
-            <!-- Only render toggle if there's at least one more page -->
-            
-          </div>
-        
-
-        <!-- Nested navigation -->
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-
-  <!-- Typeset title -->
-  
-    Quickstart
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-
-            <!-- Nested navigation item -->
-            
-              
-            
-          </ul>
-        </nav>
-
-      <!-- Pruned navigation item -->
-      
+      </a>
     </li>
-
-  <!-- Currently active page -->
   
 
               
@@ -20290,10 +20218,10 @@ Please refer to it when making your own layer plugin for Costmap2D.</p>
 <p>The order in which plugins are listed in the configuration is significant, as it determines the sequence in which they are applied to the costmap. For example, if the inflation layer is listed before the range layer, obstacles added to the costmap by the range layer will not be inflated.</p>
 </div>
 <h3 id="4-run-gradientlayer-plugin">4. Run GradientLayer plugin<a class="headerlink" href="#4-run-gradientlayer-plugin" title="Permanent link"></a></h3>
-<p>Run Turtlebot3 simulation with enabled Nav2. Detailed instructions how to make it are written at <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/#quickstart">Quickstart</a>. Below is shortcut command for that:</p>
+<p>Run Turtlebot3 simulation with enabled Nav2. Detailed instructions how to make it are written at <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/quickstart/#quickstart">Quickstart</a>. Below is shortcut command for that:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1">ros2<span class="w"> </span>launch<span class="w"> </span>nav2_bringup<span class="w"> </span>tb3_simulation_launch.py
 </span></code></pre></div>
-<p>Then goto RViz and click on the "2D Pose Estimate" button at the top and point the location on map as it was described in <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/#quickstart">Quickstart</a>. Robot will be localized on map and the result should be as presented at picture below. There, the gradient costmap can be seen. There are also 2 noticeable things: dynamically updated by <code>GradientLayer::updateCosts()</code> costmap within its bounds and global path curved by gradient:</p>
+<p>Then goto RViz and click on the "2D Pose Estimate" button at the top and point the location on map as it was described in <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/quickstart/#quickstart">Quickstart</a>. Robot will be localized on map and the result should be as presented at picture below. There, the gradient costmap can be seen. There are also 2 noticeable things: dynamically updated by <code>GradientLayer::updateCosts()</code> costmap within its bounds and global path curved by gradient:</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/gradient_layer_run.png" data-desc-position="bottom"><img alt="Image of gradient costmap used" src="../images/gradient_layer_run.png" title="Image of gradient costmap used" width="700px"></a>
 </figure>
