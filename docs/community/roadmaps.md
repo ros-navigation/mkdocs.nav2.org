@@ -5,6 +5,14 @@ This is *not* an exhaustive list of planned features or what changes may be foun
 It represents only the items of direct commitment to give insight into commitments for REP-2005 repositories in the [ROS 2 Roadmap](https://docs.ros.org/en/rolling/The-ROS2-Project/Roadmap.html).
 For a full list of important completed changes in the project, see the Migration Guides [Migration Guides][migration-guides].
 
+
+<div class="roadmap-progress">
+  <div class="roadmap-progress-track">
+    <div class="roadmap-progress-fill"></div>
+  </div>
+  <div class="roadmap-progress-dates"><span></span><span></span></div>
+</div>
+
 ## M-Turtle Roadmap
 
 - [ ] :roadmap-size-medium: - Update and refine behavior trees for more intelligent behavior.
