@@ -4,6 +4,7 @@ Below is a list of ROSCon talks that have been given by the Nav2 team and the co
 
 ## Nav2 Developer Talks
 
+- [ROSCon 2025: On Use of Nav2 Route Server](https://vimeo.com/1136164030)
 - [ROSCon 2024: On Use of Nav2 Docking](https://vimeo.com/1024971348)
 - [ROSCon FR 2023: Nav2 Whys over What's: Navigating the Philosophies Behind the Features](https://www.youtube.com/watch?v=2W3zWO-msEo)
 - [ROSCon 2023: On Use of Nav2 MPPI Controller](https://vimeo.com/879001391)
