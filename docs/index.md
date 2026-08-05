@@ -92,8 +92,13 @@ Nav2 is available across multiple ROS 2 distributions with varying levels of sup
     <img src="images/distro_graphics/rolling.png"/>
   </div>
   <div class="distro-cell">
-    <div class="distro-title">Kilted Kaiju</div>
+    <div class="distro-title">Lyrical Lynx</div>
     <div class="distro-badge active">Active Support</div>
+    <img src="images/distro_graphics/lyrical.png"/>
+  </div>
+  <div class="distro-cell">
+    <div class="distro-title">Kilted Kaiju</div>
+    <div class="distro-badge maintained">Maintained</div>
     <img src="images/distro_graphics/kilted.png"/>
   </div>
   <div class="distro-cell">
