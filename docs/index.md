@@ -122,12 +122,3 @@ Nav2 is available across multiple ROS 2 distributions with varying levels of sup
     <img src="images/distro_graphics/galactic.png"/>
   </div>
 </div>
-
-## Related Projects
-
-Check out related projects to Nav2:
-
-- [BehaviorTree.CPP](https://www.behaviortree.dev/)
-- [Robot Localization](https://github.com/cra-ros-pkg/robot_localization)
-- [SLAM Toolbox](https://github.com/SteveMacenski/slam_toolbox)
-- [Fuse](https://github.com/locusrobotics/fuse)

@@ -19,5 +19,8 @@ This is a community maintained list of related repositories and projects to Navi
 [docs.nav2.org]: https://github.com/ros-navigation/docs.nav2.org
 [navigation2_tutorials]: https://github.com/ros-navigation/navigation2_tutorials
 [navigation2_dynamic]: https://github.com/ros-navigation/navigation2_dynamic
+[navigation2.ai]: https://github.com/ros-navigation/navigation2.ai
+[BehaviorTree.CPP]: https://www.behaviortree.dev/
 [robot_localization]: https://github.com/cra-ros-pkg/robot_localization
+[Fuse]: https://github.com/locusrobotics/fuse
 [slam_toolbox]: https://github.com/SteveMacenski/slam_toolbox
