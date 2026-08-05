@@ -20,7 +20,7 @@ For a full list of important completed changes in the project, see the Migration
 - [ ] :roadmap-size-medium: - Continue to abstract ROS APIs into the Nav2 ROS Common package for better multi-distro support (Time, Clock, TF, etc).
 - [ ] :roadmap-size-large: - Global Planner benchmark evaluation testing framework for more confident changes over large scale datasets
 - [ ] :roadmap-size-medium: - Reduce bond connection overhead to Nav2 Task Servers
-- [ ] :roadmap-size-large: - Review time synchronous behavior in Nav2 (no uses of ``Time(0)``, arbitrary ``now()``, etc) of subscriptions, publishers, TF, and others
+- [ ] :roadmap-size-small: - Review time synchronous behavior in Nav2 (no uses of ``Time(0)``, arbitrary ``now()``, etc) of subscriptions, publishers, TF, and others
 - [x] :roadmap-size-large: - Update to new documentation website with a modern format and styling
 
 ## Lyrical Roadmap
