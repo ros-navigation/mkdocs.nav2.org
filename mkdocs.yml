@@ -47,6 +47,8 @@ plugins:
   - search      # Docs: https://squidfunk.github.io/mkdocs-material/plugins/search/
 
 extra:
+  ros2_distro: rolling
+  generator: false
   version:
     provider: mike
   scope: /
