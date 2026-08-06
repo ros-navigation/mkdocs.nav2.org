@@ -4399,10 +4399,10 @@ SUVORK5CYII=
 </li>
         
           <li class="md-nav__item">
-  <a href="#followwaypointsposes" class="md-nav__link">
+  <a href="#followwaypointsposes-number_of_loops0-goal_index0" class="md-nav__link">
     <span class="md-ellipsis">
       
-        followWaypoints(poses)
+        followWaypoints(poses, number_of_loops=0, goal_index=0)
       
     </span>
   </a>
@@ -19645,10 +19645,10 @@ SUVORK5CYII=
 </li>
         
           <li class="md-nav__item">
-  <a href="#followwaypointsposes" class="md-nav__link">
+  <a href="#followwaypointsposes-number_of_loops0-goal_index0" class="md-nav__link">
     <span class="md-ellipsis">
       
-        followWaypoints(poses)
+        followWaypoints(poses, number_of_loops=0, goal_index=0)
       
     </span>
   </a>
@@ -21889,10 +21889,10 @@ SUVORK5CYII=
 </li>
         
           <li class="md-nav__item">
-  <a href="#followwaypointsposes" class="md-nav__link">
+  <a href="#followwaypointsposes-number_of_loops0-goal_index0" class="md-nav__link">
     <span class="md-ellipsis">
       
-        followWaypoints(poses)
+        followWaypoints(poses, number_of_loops=0, goal_index=0)
       
     </span>
   </a>
@@ -22672,9 +22672,9 @@ If a server fails, it may throw an exception or return a <em>None</em> object, s
 <dl>
 <dd>Requests the robot to drive to a pose (<code>PoseStamped</code>).</dd>
 </dl>
-<h3 id="followwaypointsposes"><strong><code>followWaypoints(poses)</code></strong><a class="headerlink" href="#followwaypointsposes" title="Permanent link"></a></h3>
+<h3 id="followwaypointsposes-number_of_loops0-goal_index0"><strong><code>followWaypoints(poses, number_of_loops=0, goal_index=0)</code></strong><a class="headerlink" href="#followwaypointsposes-number_of_loops0-goal_index0" title="Permanent link"></a></h3>
 <dl>
-<dd>Requests the robot to follow a set of waypoints (list of <code>PoseStamped</code>). This will execute the chosen <code>TaskExecutor</code> plugin at each pose.</dd>
+<dd>Requests the robot to follow a set of waypoints (list of <code>PoseStamped</code>), starting at <code>goal_index</code> (default <code>0</code>) and repeating <code>number_of_loops</code> times after the first pass (default <code>0</code>, runs once). This will execute the chosen <code>TaskExecutor</code> plugin at each pose.</dd>
 </dl>
 <h3 id="followpathpath-controller_id-goal_checker_id-progress_checker_id-path_handler_id"><strong><code>followPath(path, controller_id='', goal_checker_id='', progress_checker_id='', path_handler_id='')</code></strong><a class="headerlink" href="#followpathpath-controller_id-goal_checker_id-progress_checker_id-path_handler_id" title="Permanent link"></a></h3>
 <dl>
