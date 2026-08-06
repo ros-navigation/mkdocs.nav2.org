@@ -1,0 +1,28 @@
+merge_queue:
+  queue_controls_comment: false
+
+pull_request_rules:
+  - name: backport to lyrical at reviewers discretion
+    conditions:
+      - base=rolling
+      - "label=backport-lyrical"
+    actions:
+      backport:
+        branches:
+          - lyrical
+
+  - name: ask to resolve conflict
+    conditions:
+      - conflict
+      - author!=mergify
+    actions:
+      comment:
+        message: This pull request is in conflict. Could you fix it @{{author}}?
+
+  - name: circleci build failures
+    conditions:
+      - "check-failure=ci/circleci: docs_build"
+    actions:
+      comment:
+        message: |
+          @{{author}}, your PR has failed to build. Please check CI outputs and resolve issues.
