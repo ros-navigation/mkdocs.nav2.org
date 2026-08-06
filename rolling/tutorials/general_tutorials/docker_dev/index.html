@@ -84,6 +84,8 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/robots_grid.css">
     
+      <link rel="stylesheet" href="../../../assets/stylesheets/robots_marquee.css">
+    
       <link rel="stylesheet" href="../../../assets/stylesheets/search_button.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/sidebar.css">
@@ -97,6 +99,8 @@
       <link rel="stylesheet" href="../../../assets/stylesheets/video.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/watermark.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/progress_bar.css">
     
     <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -20963,7 +20967,7 @@ For each distribution, there are a couple of variants:</p>
 </ul>
 <p>These are the same as if you were to use <em>apt install ros-rolling-desktop-full</em>, but in container form.
 Each of those containers build off of the previous one using <code>FROM</code> and then install the binaries described to serve to the container user.
-Which you use depends on your application and needs, but <code>osrf/ros:&lt;distro&gt;-ros-base</code> is a good default for development and deployment.
+Which you use depends on your application and needs, but <code>osrf/ros:rolling-ros-base</code> is a good default for development and deployment.
 We're using desktop-full in the context of this tutorial for ease of having rviz2 and such built-in batteries-included.</p>
 <p>You can pull and use them the same way as before, for example:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1">sudo<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>ros:rolling-ros-base
@@ -21159,11 +21163,6 @@ From here, you can go to the <a class="autorefs autorefs-internal" href="../../.
     </div>
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
         
@@ -21238,6 +21237,8 @@ From here, you can go to the <a class="autorefs autorefs-internal" href="../../.
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
         <script src="../../../assets/javascripts/katex.js"></script>
+      
+        <script src="../../../assets/javascripts/progress_bar.js"></script>
       
         <script src="../../../assets/javascripts/sidebar_scrollwrap.js"></script>
       

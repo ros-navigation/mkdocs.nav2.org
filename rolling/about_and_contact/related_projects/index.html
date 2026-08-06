@@ -84,6 +84,8 @@
     
       <link rel="stylesheet" href="../../assets/stylesheets/robots_grid.css">
     
+      <link rel="stylesheet" href="../../assets/stylesheets/robots_marquee.css">
+    
       <link rel="stylesheet" href="../../assets/stylesheets/search_button.css">
     
       <link rel="stylesheet" href="../../assets/stylesheets/sidebar.css">
@@ -97,6 +99,8 @@
       <link rel="stylesheet" href="../../assets/stylesheets/video.css">
     
       <link rel="stylesheet" href="../../assets/stylesheets/watermark.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/progress_bar.css">
     
     <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -20411,6 +20415,21 @@ in overrides/partials/header.html -->
 <td>Steve Macenski</td>
 <td>Default 2D SLAM library</td>
 </tr>
+<tr>
+<td><a href="https://github.com/ros-navigation/navigation2.ai">navigation2.ai</a></td>
+<td>Steve Macenski</td>
+<td>AI and spatial intelligence capabilities for Nav2</td>
+</tr>
+<tr>
+<td><a href="https://www.behaviortree.dev/">BehaviorTree.CPP</a></td>
+<td>Davide Faconti</td>
+<td>Behavior Tree library used by Nav2 for task orchestration</td>
+</tr>
+<tr>
+<td><a href="https://github.com/locusrobotics/fuse">Fuse</a></td>
+<td>Locus Robotics</td>
+<td>Sensor fusion framework for state estimation in ROS 2</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -20458,11 +20477,6 @@ in overrides/partials/header.html -->
       © Copyright 2026, Open Navigation LLC.
     </div>
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
@@ -20538,6 +20552,8 @@ in overrides/partials/header.html -->
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
         <script src="../../assets/javascripts/katex.js"></script>
+      
+        <script src="../../assets/javascripts/progress_bar.js"></script>
       
         <script src="../../assets/javascripts/sidebar_scrollwrap.js"></script>
       

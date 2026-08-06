@@ -84,6 +84,8 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/robots_grid.css">
     
+      <link rel="stylesheet" href="../../../assets/stylesheets/robots_marquee.css">
+    
       <link rel="stylesheet" href="../../../assets/stylesheets/search_button.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/sidebar.css">
@@ -97,6 +99,8 @@
       <link rel="stylesheet" href="../../../assets/stylesheets/video.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/watermark.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/progress_bar.css">
     
     <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -20747,11 +20751,15 @@ in overrides/partials/header.html -->
 <p>Update link for <code>edit_uri</code> key in <code>mkdocs.yml</code> configuration file:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><span class="nt">edit_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/ros-navigation/docs.nav2.org/blob/&lt;distro&gt;/docs/</span>
 </span></code></pre></div>
+<p>Update <code>ros2_distro</code> variable in <code>mkdocs.yml</code>:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><span class="nt">extra</span><span class="p">:</span>
+</span><span id="__span-4-2"><span class="w">  </span><span class="nt">ros2_distro</span><span class="p">:</span><span class="w"> </span><span class="s">"&lt;distro&gt;"</span>
+</span></code></pre></div>
 <p>Update <code>branch</code> variable in <code>macros/variables.yml</code>:</p>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><span class="nt">github_repositories</span><span class="p">:</span>
-</span><span id="__span-4-2"><span class="w">  </span><span class="nt">navigation2</span><span class="p">:</span>
-</span><span id="__span-4-3"><span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">"ros-navigation"</span>
-</span><span id="__span-4-4"><span class="w">    </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="s">"&lt;distro&gt;"</span>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><span class="nt">github_repositories</span><span class="p">:</span>
+</span><span id="__span-5-2"><span class="w">  </span><span class="nt">navigation2</span><span class="p">:</span>
+</span><span id="__span-5-3"><span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">"ros-navigation"</span>
+</span><span id="__span-5-4"><span class="w">    </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="s">"&lt;distro&gt;"</span>
 </span></code></pre></div>
 <h2 id="3-update-documentation">3. Update Documentation<a class="headerlink" href="#3-update-documentation" title="Permanent link"></a></h2>
 <h3 id="31-update-links">3.1 Update links<a class="headerlink" href="#31-update-links" title="Permanent link"></a></h3>
@@ -20772,15 +20780,15 @@ in overrides/partials/header.html -->
 <p>Review <a class="autorefs autorefs-internal" title="Tutorials" href="../../../tutorials/#tutorials">tutorials</a> for compatibility with the new distribution, including API and behavior changes.</p>
 <h2 id="4-build-and-publish-documentation">4. Build and Publish Documentation<a class="headerlink" href="#4-build-and-publish-documentation" title="Permanent link"></a></h2>
 <p>Once all the changes are made, use the command below to check the build:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1">sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip<span class="w"> </span>python3-venv
-</span><span id="__span-5-2">python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
-</span><span id="__span-5-3"><span class="nb">source</span><span class="w"> </span>venv/bin/activate
-</span><span id="__span-5-4">pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</span><span id="__span-5-5">mkdocs<span class="w"> </span>build
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1">sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip<span class="w"> </span>python3-venv
+</span><span id="__span-6-2">python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</span><span id="__span-6-3"><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</span><span id="__span-6-4">pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span><span id="__span-6-5">mkdocs<span class="w"> </span>build
 </span></code></pre></div>
 <p>Refer to <a href="https://github.com/ros-navigation/docs.nav2.org/blob/master/README.md">README.md</a> for additional commands, such as previewing multiple versions locally before publishing.</p>
 <p>Publish the documentation to the new distribution branch:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1">git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;distro&gt;
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1">git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;distro&gt;
 </span></code></pre></div>
 <h2 id="5-mark-branch-as-protected">5. Mark Branch as Protected<a class="headerlink" href="#5-mark-branch-as-protected" title="Permanent link"></a></h2>
 <p>Go to the Repo Settings -&gt; Branches. Create a branch protection rule for the new branch that matches the last.</p>
@@ -20832,11 +20840,6 @@ in overrides/partials/header.html -->
       © Copyright 2026, Open Navigation LLC.
     </div>
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
@@ -20912,6 +20915,8 @@ in overrides/partials/header.html -->
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
         <script src="../../../assets/javascripts/katex.js"></script>
+      
+        <script src="../../../assets/javascripts/progress_bar.js"></script>
       
         <script src="../../../assets/javascripts/sidebar_scrollwrap.js"></script>
       
