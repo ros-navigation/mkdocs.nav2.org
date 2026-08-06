@@ -12,6 +12,9 @@ This is a community maintained list of related repositories and projects to Navi
 | [navigation2_dynamic][]    | Steve Macenski | Tools, algorithms, and capabilities for working with dynamic obstacles in ROS 2              |
 | [robot_localization][]     | Tom Moore      | State estimation software for ROS 2 used for odometry fusion and GPS transformations         |
 | [slam_toolbox][]           | Steve Macenski | Default 2D SLAM library                                                                      |
+| [navigation2.ai][]         | Steve Macenski | AI and spatial intelligence capabilities for Nav2                                            |
+| [BehaviorTree.CPP][]       | Davide Faconti | Behavior Tree library used by Nav2 for task orchestration                                    |
+| [Fuse][]                   | Locus Robotics | Sensor fusion framework for state estimation in ROS 2                                        |
 
 </div>
 
