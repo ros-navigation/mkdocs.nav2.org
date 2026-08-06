@@ -31,18 +31,11 @@ To use Nav2, you'll first need to build or install ROS 2 and related development
 
 ## Nav2 Project
 
-!!! warning
-
-    The branch naming schema for Nav2 is organized by ROS distro, while the default branch for Rolling is `main`.
-
 Similarly, you can install the Nav2 project in different ways:
 
 === "Nav2 Released Distribution Binaries"
 
-    !!! warning
-        Nav2 does not currently release binaries on rolling, so it must be [build from source](#__tabbed_2_2).
-
-    Nav2 and its dependencies are released as binaries.
+    Nav2 and its dependencies are released as binaries for non-Rolling released distributions.
     You may install it via the following to get the latest stable released version:
 
     ```bash
@@ -63,7 +56,7 @@ Similarly, you can install the Nav2 project in different ways:
     Once your environment is setup, clone the Nav2 repo, install all dependencies, and build the workspace:
 
     ```bash
-    NAV_DISTRO=${ROS_DISTRO/rolling/main}
+    NAV_DISTRO=${ROS_DISTRO; rolling/main}
     mkdir -p ~/nav2_ws/src && cd ~/nav2_ws
     git clone https://github.com/ros-navigation/navigation2.git --branch $NAV_DISTRO ./src/navigation2
     git clone https://github.com/ros-navigation/nav2_minimal_turtlebot_simulation.git --branch $NAV_DISTRO ./src/nav2_minimal_turtlebot_simulation
