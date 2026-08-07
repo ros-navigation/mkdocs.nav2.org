@@ -72,31 +72,35 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/search_button.css">
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/sidebar.css">
-    
       <link rel="stylesheet" href="../../../assets/stylesheets/distro_grid.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/robots_grid.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/table.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/images.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/nav_buttons.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/permalink.css">
     
+      <link rel="stylesheet" href="../../../assets/stylesheets/robots_grid.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/robots_marquee.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/search_button.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/sidebar.css">
+    
       <link rel="stylesheet" href="../../../assets/stylesheets/sponsorship_banner.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/images.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/table.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/version_selector.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/video.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/watermark.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/version_selector.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/progress_bar.css">
     
     <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -3481,7 +3485,7 @@ SUVORK5CYII=
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../getting_started/quickstart/" class="md-nav__link">
+      <a href="../../../getting_started/quickstart/quickstart/" class="md-nav__link">
         
   
 
@@ -5184,50 +5188,9 @@ SUVORK5CYII=
 
   <!-- Navigation item with nested items -->
   
-
-    <!-- Determine all nested items that are index pages -->
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../../getting_started/quickstart/quickstart/" class="md-nav__link">
         
-          
-        
-      
-    
-    
-
-    <!-- Navigation tabs -->
-    
-
-      <!-- Render 1st level active item as section -->
-      
-
-      <!-- Navigation tabs + sections -->
-      
-
-    <!-- Navigation sections -->
-    
-
-    <!-- Navigation pruning -->
-    
-
-    <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-
-        <!-- Determine checked and indeterminate state -->
-        
-
-        <!-- Active checkbox expands items contained within nested section -->
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
-
-        <!-- Toggle to expand nested items -->
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../getting_started/quickstart/" class="md-nav__link ">
-              
   
 
   <!-- Navigation link icon -->
@@ -5253,39 +5216,8 @@ SUVORK5CYII=
   <!-- Navigation link status -->
   
 
-            </a>
-
-            <!-- Only render toggle if there's at least one more page -->
-            
-          </div>
-        
-
-        <!-- Nested navigation -->
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-
-  <!-- Typeset title -->
-  
-    Quickstart
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-
-            <!-- Nested navigation item -->
-            
-              
-            
-          </ul>
-        </nav>
-
-      <!-- Pruned navigation item -->
-      
+      </a>
     </li>
-
-  <!-- Currently active page -->
   
 
               
@@ -18985,6 +18917,8 @@ SUVORK5CYII=
       
         
       
+        
+      
     
     
 
@@ -19424,6 +19358,52 @@ SUVORK5CYII=
   <!-- Typeset title -->
   
     Kilted to Lyrical
+  
+
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link to encrypted content -->
+  
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration_and_development/migration_guides/Lyrical/" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    
+
+  <!-- Typeset title -->
+  
+    Lyrical to M-Turtle
   
 
 
@@ -20597,7 +20577,7 @@ in overrides/partials/header.html -->
 <h1 id="using-rotation-shim-controller">Using Rotation Shim Controller<a class="headerlink" href="#using-rotation-shim-controller" title="Permanent link"></a></h1>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link"></a></h2>
 <p>This tutorial will discuss how to set up your robot to use the <code>RotationShimController</code> to help create intuitive, rotate-in-place, behavior for your robot while starting out to track a path. The goal of this tutorial is to explain to the reader the value of the controller, how to configure it, how to configure the primary controller with it, and finally an example of it in use.</p>
-<p>Before starting this tutorial, completing the <a class="autorefs autorefs-internal" href="../../../getting_started/quickstart/#quickstart">Quickstart</a> is highly recommended especially if you are new to ROS and Nav2. The requirements are having the latest install of Nav2 / ROS 2 containing this package.</p>
+<p>Before starting this tutorial, completing the <a class="autorefs autorefs-internal" href="../../../getting_started/quickstart/quickstart/#quickstart">Quickstart</a> is highly recommended especially if you are new to ROS and Nav2. The requirements are having the latest install of Nav2 / ROS 2 containing this package.</p>
 <h2 id="what-is-the-rotation-shim-controller">What is the Rotation Shim Controller?<a class="headerlink" href="#what-is-the-rotation-shim-controller" title="Permanent link"></a></h2>
 <p>This was developed due to quirks in TEB and DWB, but applicable to any other controller plugin type that you'd like to have rotation in place behavior with. <code>TEB</code>'s behavior tends to whip the robot around with small turns, or when the path is starting at a very different heading than current, in a somewhat surprising way due to the elastic band approach. <code>DWB</code> can be tuned to have any type of behavior, but typically to tune it to be an excellent path follower also makes it less optimally capable of smooth transitions to new paths at far away headings – there are always trade offs. Giving both TEB and DWB a better starting point to start tracking a path makes tuning the controllers significantly easier and creates more intuitive results for on-lookers.</p>
 <p>Note that it is not required to use this with <strong>any</strong> plugin. Many users are perfectly successful without using this controller, but if a robot may rotate in place before beginning its path tracking task (or others), it can be advantageous to do so.</p>
@@ -20725,11 +20705,6 @@ You can observe this below with the primary controller set the <code>DWB</code> 
     </div>
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
         
@@ -20804,6 +20779,8 @@ You can observe this below with the primary controller set the <code>DWB</code> 
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
         <script src="../../../assets/javascripts/katex.js"></script>
+      
+        <script src="../../../assets/javascripts/progress_bar.js"></script>
       
         <script src="../../../assets/javascripts/sidebar_scrollwrap.js"></script>
       

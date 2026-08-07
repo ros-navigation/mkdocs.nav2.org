@@ -72,31 +72,35 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/search_button.css">
-    
-      <link rel="stylesheet" href="../../../assets/stylesheets/sidebar.css">
-    
       <link rel="stylesheet" href="../../../assets/stylesheets/distro_grid.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/robots_grid.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/table.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/images.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/nav_buttons.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/permalink.css">
     
+      <link rel="stylesheet" href="../../../assets/stylesheets/robots_grid.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/robots_marquee.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/search_button.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/sidebar.css">
+    
       <link rel="stylesheet" href="../../../assets/stylesheets/sponsorship_banner.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/images.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/table.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/version_selector.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/video.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/watermark.css">
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/version_selector.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/progress_bar.css">
     
     <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -3481,7 +3485,7 @@ SUVORK5CYII=
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../getting_started/quickstart/" class="md-nav__link">
+      <a href="../../../getting_started/quickstart/quickstart/" class="md-nav__link">
         
   
 
@@ -5184,50 +5188,9 @@ SUVORK5CYII=
 
   <!-- Navigation item with nested items -->
   
-
-    <!-- Determine all nested items that are index pages -->
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../../getting_started/quickstart/quickstart/" class="md-nav__link">
         
-          
-        
-      
-    
-    
-
-    <!-- Navigation tabs -->
-    
-
-      <!-- Render 1st level active item as section -->
-      
-
-      <!-- Navigation tabs + sections -->
-      
-
-    <!-- Navigation sections -->
-    
-
-    <!-- Navigation pruning -->
-    
-
-    <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-
-        <!-- Determine checked and indeterminate state -->
-        
-
-        <!-- Active checkbox expands items contained within nested section -->
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
-
-        <!-- Toggle to expand nested items -->
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../getting_started/quickstart/" class="md-nav__link ">
-              
   
 
   <!-- Navigation link icon -->
@@ -5253,39 +5216,8 @@ SUVORK5CYII=
   <!-- Navigation link status -->
   
 
-            </a>
-
-            <!-- Only render toggle if there's at least one more page -->
-            
-          </div>
-        
-
-        <!-- Nested navigation -->
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-
-  <!-- Typeset title -->
-  
-    Quickstart
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-
-            <!-- Nested navigation item -->
-            
-              
-            
-          </ul>
-        </nav>
-
-      <!-- Pruned navigation item -->
-      
+      </a>
     </li>
-
-  <!-- Currently active page -->
   
 
               
@@ -19085,6 +19017,8 @@ SUVORK5CYII=
       
         
       
+        
+      
     
     
 
@@ -19524,6 +19458,52 @@ SUVORK5CYII=
   <!-- Typeset title -->
   
     Kilted to Lyrical
+  
+
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link to encrypted content -->
+  
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../../configuration_and_development/migration_guides/Lyrical/" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    
+
+  <!-- Typeset title -->
+  
+    Lyrical to M-Turtle
   
 
 
@@ -20987,7 +20967,7 @@ For each distribution, there are a couple of variants:</p>
 </ul>
 <p>These are the same as if you were to use <em>apt install ros-rolling-desktop-full</em>, but in container form.
 Each of those containers build off of the previous one using <code>FROM</code> and then install the binaries described to serve to the container user.
-Which you use depends on your application and needs, but <code>osrf/ros:&lt;distro&gt;-ros-base</code> is a good default for development and deployment.
+Which you use depends on your application and needs, but <code>osrf/ros:lyrical-ros-base</code> is a good default for development and deployment.
 We're using desktop-full in the context of this tutorial for ease of having rviz2 and such built-in batteries-included.</p>
 <p>You can pull and use them the same way as before, for example:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-17-1">sudo<span class="w"> </span>docker<span class="w"> </span>pull<span class="w"> </span>ros:rolling-ros-base
@@ -21109,7 +21089,7 @@ Instead, it pulls the dependencies so that when you run this container, you obta
 </span></code></pre></div>
 <h3 id="nav2-deployment-image">Nav2 Deployment Image<a class="headerlink" href="#nav2-deployment-image" title="Permanent link"></a></h3>
 <p>This image either downloads and installs Nav2 (Rolling; from source) or installs it (from binaries) to have a self contained image of everything you need to run Nav2.
-From here, you can go to the <a class="autorefs autorefs-internal" href="../../../getting_started/quickstart/#quickstart">Quickstart</a> to test it out!</p>
+From here, you can go to the <a class="autorefs autorefs-internal" href="../../../getting_started/quickstart/quickstart/#quickstart">Quickstart</a> to test it out!</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-24-1">ARG<span class="w"> </span><span class="nv">ROS_DISTRO</span><span class="o">=</span>rolling
 </span><span id="__span-24-2">FROM<span class="w"> </span>ros:<span class="si">${</span><span class="nv">ROS_DISTRO</span><span class="si">}</span>-ros-core
 </span><span id="__span-24-3">
@@ -21182,11 +21162,6 @@ From here, you can go to the <a class="autorefs autorefs-internal" href="../../.
       © Copyright 2026, Open Navigation LLC.
     </div>
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
@@ -21262,6 +21237,8 @@ From here, you can go to the <a class="autorefs autorefs-internal" href="../../.
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
         <script src="../../../assets/javascripts/katex.js"></script>
+      
+        <script src="../../../assets/javascripts/progress_bar.js"></script>
       
         <script src="../../../assets/javascripts/sidebar_scrollwrap.js"></script>
       

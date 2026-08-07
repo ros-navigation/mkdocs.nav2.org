@@ -72,31 +72,35 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
-    
-      <link rel="stylesheet" href="../../../../assets/stylesheets/search_button.css">
-    
-      <link rel="stylesheet" href="../../../../assets/stylesheets/sidebar.css">
-    
       <link rel="stylesheet" href="../../../../assets/stylesheets/distro_grid.css">
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/robots_grid.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/extra.css">
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/table.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/images.css">
     
       <link rel="stylesheet" href="../../../../assets/stylesheets/nav_buttons.css">
     
       <link rel="stylesheet" href="../../../../assets/stylesheets/permalink.css">
     
+      <link rel="stylesheet" href="../../../../assets/stylesheets/robots_grid.css">
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/robots_marquee.css">
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/search_button.css">
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/sidebar.css">
+    
       <link rel="stylesheet" href="../../../../assets/stylesheets/sponsorship_banner.css">
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/images.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/table.css">
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/version_selector.css">
     
       <link rel="stylesheet" href="../../../../assets/stylesheets/video.css">
     
       <link rel="stylesheet" href="../../../../assets/stylesheets/watermark.css">
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/version_selector.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/progress_bar.css">
     
     <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -3481,7 +3485,7 @@ SUVORK5CYII=
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../../getting_started/quickstart/" class="md-nav__link">
+      <a href="../../../../getting_started/quickstart/quickstart/" class="md-nav__link">
         
   
 
@@ -5184,50 +5188,9 @@ SUVORK5CYII=
 
   <!-- Navigation item with nested items -->
   
-
-    <!-- Determine all nested items that are index pages -->
-    
-    
-      
+    <li class="md-nav__item">
+      <a href="../../../../getting_started/quickstart/quickstart/" class="md-nav__link">
         
-          
-        
-      
-    
-    
-
-    <!-- Navigation tabs -->
-    
-
-      <!-- Render 1st level active item as section -->
-      
-
-      <!-- Navigation tabs + sections -->
-      
-
-    <!-- Navigation sections -->
-    
-
-    <!-- Navigation pruning -->
-    
-
-    <!-- Nested navigation item -->
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-
-        <!-- Determine checked and indeterminate state -->
-        
-
-        <!-- Active checkbox expands items contained within nested section -->
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
-
-        <!-- Toggle to expand nested items -->
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../../../../getting_started/quickstart/" class="md-nav__link ">
-              
   
 
   <!-- Navigation link icon -->
@@ -5253,39 +5216,8 @@ SUVORK5CYII=
   <!-- Navigation link status -->
   
 
-            </a>
-
-            <!-- Only render toggle if there's at least one more page -->
-            
-          </div>
-        
-
-        <!-- Nested navigation -->
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_2">
-            <span class="md-nav__icon md-icon"></span>
-            
-
-  <!-- Typeset title -->
-  
-    Quickstart
-  
-
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix="">
-
-            <!-- Nested navigation item -->
-            
-              
-            
-          </ul>
-        </nav>
-
-      <!-- Pruned navigation item -->
-      
+      </a>
     </li>
-
-  <!-- Currently active page -->
   
 
               
@@ -19024,6 +18956,8 @@ SUVORK5CYII=
       
         
       
+        
+      
     
     
 
@@ -19463,6 +19397,52 @@ SUVORK5CYII=
   <!-- Typeset title -->
   
     Kilted to Lyrical
+  
+
+
+    <!-- Navigation link subtitle -->
+    
+  </span>
+
+  <!-- Navigation link to encrypted content -->
+  
+
+  <!-- Navigation link status -->
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+
+  <!-- Determine classes -->
+  
+  
+
+  <!-- Determine active page for paginated views -->
+  
+
+  <!-- Navigation item with nested items -->
+  
+    <li class="md-nav__item">
+      <a href="../../../../configuration_and_development/migration_guides/Lyrical/" class="md-nav__link">
+        
+  
+
+  <!-- Navigation link icon -->
+  
+
+  <!-- Navigation link title -->
+  <span class="md-ellipsis">
+    
+
+  <!-- Typeset title -->
+  
+    Lyrical to M-Turtle
   
 
 
@@ -20677,13 +20657,13 @@ in overrides/partials/header.html -->
 <p>This document explains how to use Nav2 with SLAM.
 The following steps show ROS 2 users how to generate occupancy grid maps and use Nav2 to move their robot around.
 This tutorial applies to both simulated and physical robots, but will be completed here on a physical robot.</p>
-<p>Before completing this tutorial, completing the <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/#quickstart">Quickstart</a> is highly recommended especially if you are new to ROS and Navigation2.</p>
+<p>Before completing this tutorial, completing the <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/quickstart/#quickstart">Quickstart</a> is highly recommended especially if you are new to ROS and Navigation2.</p>
 <p>In this tutorial we'll be using SLAM Toolbox. More information can be found in the <a href="https://vimeo.com/378682207">ROSCon talk for SLAM Toolbox</a></p>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link"></a></h2>
 <p>You must install Navigation2, Turtlebot3, and SLAM Toolbox.
-If you don't have them installed, please follow <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/#quickstart">Quickstart</a>.</p>
+If you don't have them installed, please follow <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/quickstart/#quickstart">Quickstart</a>.</p>
 <p>First, source your ROS 2 installation to set the environment variables:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><span class="nb">source</span><span class="w"> </span>/opt/ros/&lt;ros2-distro&gt;/setup.bash
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><span class="nb">source</span><span class="w"> </span>/opt/ros/lyrical/setup.bash
 </span></code></pre></div>
 <p>SLAM Toolbox can be installed via:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1">sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-<span class="nv">$ROS_DISTRO</span>-slam-toolbox
@@ -20696,7 +20676,7 @@ If you don't have them installed, please follow <a class="autorefs autorefs-inte
 <p>For this tutorial, we will use the turtlebot3.
 The turtlebot3 software can be installed via the following or on the <a href="https://github.com/ROBOTIS-GIT/turtlebot3">turtlebot3 repository</a>:</p>
 <p>First, source your ROS 2 installation to set the environment variables:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><span class="nb">source</span><span class="w"> </span>/opt/ros/&lt;ros2-distro&gt;/setup.bash
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><span class="nb">source</span><span class="w"> </span>/opt/ros/lyrical/setup.bash
 </span></code></pre></div>
 <p>Then install the Turtlebot3 packages:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1">sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-<span class="nv">$ROS_DISTRO</span>-turtlebot3<span class="w"> </span>ros-<span class="nv">$ROS_DISTRO</span>-turtlebot3-msgs<span class="w"> </span>ros-<span class="nv">$ROS_DISTRO</span>-turtlebot3-bringup
@@ -20704,7 +20684,7 @@ The turtlebot3 software can be installed via the following or on the <a href="ht
 <p>If you have another robot, replace with your robot specific interfaces.
 Typically, this includes the robot state publisher of the URDF, simulated or physical robot interfaces, controllers, safety nodes, and the like.</p>
 <p>Run the following commands first whenever you open a new terminal during this tutorial.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><span class="nb">source</span><span class="w"> </span>/opt/ros/&lt;ros2-distro&gt;/setup.bash<span class="w"> </span><span class="o">&amp;&amp;</span>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><span class="nb">source</span><span class="w"> </span>/opt/ros/lyrical/setup.bash<span class="w"> </span><span class="o">&amp;&amp;</span>
 </span><span id="__span-5-2"><span class="nb">export</span><span class="w"> </span><span class="nv">TURTLEBOT3_MODEL</span><span class="o">=</span>waffle
 </span></code></pre></div>
 <p>Launch your robot's interface and robot state publisher, for example:</p>
@@ -20783,11 +20763,6 @@ We provide the instructions above with the assumption that you'd like to run SLA
     </div>
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
         
@@ -20862,6 +20837,8 @@ We provide the instructions above with the assumption that you'd like to run SLA
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
         <script src="../../../../assets/javascripts/katex.js"></script>
+      
+        <script src="../../../../assets/javascripts/progress_bar.js"></script>
       
         <script src="../../../../assets/javascripts/sidebar_scrollwrap.js"></script>
       
