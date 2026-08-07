@@ -84,6 +84,8 @@
     
       <link rel="stylesheet" href="../../../../assets/stylesheets/robots_grid.css">
     
+      <link rel="stylesheet" href="../../../../assets/stylesheets/robots_marquee.css">
+    
       <link rel="stylesheet" href="../../../../assets/stylesheets/search_button.css">
     
       <link rel="stylesheet" href="../../../../assets/stylesheets/sidebar.css">
@@ -97,6 +99,8 @@
       <link rel="stylesheet" href="../../../../assets/stylesheets/video.css">
     
       <link rel="stylesheet" href="../../../../assets/stylesheets/watermark.css">
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/progress_bar.css">
     
     <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -20426,7 +20430,7 @@ It useful to visualize the segmentation mask topic to visualize the detection ov
 <figure>
   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../images/bike_lane_camera.gif" data-desc-position="bottom"><img alt="SAM3 semantic segmentation overlay on bike lane camera feed" src="../images/bike_lane_camera.gif" title="SAM3 semantic segmentation overlay on bike lane camera feed" width="700"></a>
 </figure>
-<p>How that we have that working, we can focus on the costmap integration to use this information.</p>
+<p>Now that we have that working, we can focus on the costmap integration to use this information.</p>
 <h3 id="8-configure-nav2-to-use-the-layer">8. Configure Nav2 to use the layer<a class="headerlink" href="#8-configure-nav2-to-use-the-layer" title="Permanent link"></a></h3>
 <p>The <code>opennav_sam3_nav_demo</code> package ships a Nav2 parameter file pre-wired for the SAM3 inference node for demonstration purposes.
 The interesting parts are the costmap <code>plugins</code> lists and the <code>semantic_segmentation_layer</code> blocks.</p>
@@ -20572,11 +20576,6 @@ I hope these provide some motivational examples of use-cases of SAM3 to detect a
     </div>
   
   
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
 </div>
       
         
@@ -20651,6 +20650,8 @@ I hope these provide some motivational examples of use-cases of SAM3 to detect a
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
         <script src="../../../../assets/javascripts/katex.js"></script>
+      
+        <script src="../../../../assets/javascripts/progress_bar.js"></script>
       
         <script src="../../../../assets/javascripts/sidebar_scrollwrap.js"></script>
       

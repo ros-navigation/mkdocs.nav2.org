@@ -84,6 +84,8 @@
     
       <link rel="stylesheet" href="../../../assets/stylesheets/robots_grid.css">
     
+      <link rel="stylesheet" href="../../../assets/stylesheets/robots_marquee.css">
+    
       <link rel="stylesheet" href="../../../assets/stylesheets/search_button.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/sidebar.css">
@@ -97,6 +99,8 @@
       <link rel="stylesheet" href="../../../assets/stylesheets/video.css">
     
       <link rel="stylesheet" href="../../../assets/stylesheets/watermark.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/progress_bar.css">
     
     <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -19896,7 +19900,7 @@ in overrides/partials/header.html -->
 <li>Make sure that .bashrc file has no ROS environment variables in it. Open new terminals and try to build the packages again.</li>
 <li>
 <p>Make sure to run rosdep for the correct ROS 2 distribution.</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1">rosdep<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>-r<span class="w"> </span>-q<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>--rosdistro<span class="w"> </span>&lt;ros2-distro&gt;
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-0-1">rosdep<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>-r<span class="w"> </span>-q<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>--rosdistro<span class="w"> </span>jazzy
 </span></code></pre></div>
 </li>
 <li>
@@ -19966,11 +19970,6 @@ in overrides/partials/header.html -->
       © Copyright 2026, Open Navigation LLC.
     </div>
   
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
   
 </div>
       
@@ -20046,6 +20045,8 @@ in overrides/partials/header.html -->
         <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
         <script src="../../../assets/javascripts/katex.js"></script>
+      
+        <script src="../../../assets/javascripts/progress_bar.js"></script>
       
         <script src="../../../assets/javascripts/sidebar_scrollwrap.js"></script>
       
