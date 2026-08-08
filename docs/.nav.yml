@@ -1,9 +1,11 @@
+# TODO: Update directory name 'mkdocs.nav2.org' after documentation release
+
 nav:
   - Home:
     # The Home page displays the first two levels of the navigation structure
     # with manually specified links to each page for quick access.
     # Update this section whenever the documentation directory structure or page order changes.
-    - index.md
+    - shared/mkdocs.nav2.org/docs/home/index.md
     - Getting Started:
       - getting_started/index.md
       - Quickstart: getting_started/quickstart/quickstart.md

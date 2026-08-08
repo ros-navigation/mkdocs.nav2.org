@@ -49,6 +49,8 @@ plugins:
 
 extra:
   ros2_distro: jazzy
+  # TODO: Update directory name 'mkdocs.nav2.org' after documentation release
+  homepage: shared/mkdocs.nav2.org/docs/home/
   generator: false
   version:
     provider: mike
