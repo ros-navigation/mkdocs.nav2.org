@@ -62,25 +62,74 @@ Update link for `edit_uri` key in `mkdocs.yml` configuration file:
 edit_uri: https://github.com/ros-navigation/docs.nav2.org/blob/<distro>/docs/
 ```
 
-Update `ros2_distro` variable in `mkdocs.yml`:
+Update `ros2_distro` variable and `homepage` parameter in `mkdocs.yml`:
 
 ```yaml
 extra:
   ros2_distro: "<distro>"
+  homepage: shared/docs.nav2.org/docs/home/ # This is required for point 3.1
 ```
 
-Update `branch` variable in `macros/variables.yml`:
+Update `branch` variable and include the new cloning source in `macros/variables.yml`:
 
 ```yaml
 github_repositories:
   navigation2:
-    owner: "ros-navigation"
+    ...
     branch: "<distro>"
+    ...
+
+  # This is required for point 3.1
+  docs.nav2.org:
+    owner: "ros-navigation"
+    branch: "rolling" # keep unchanged between distributions
+    destination_dir: "docs/shared"
+    data_to_clone:
+      - "/docs/home"
+      - "/docs/community"
+      - "/docs/robots_using"
+      - "/docs/about_and_contact"
 ```
 
 ## 3. Update Documentation
 
-### 3.1 Update links
+### 3.1 Change directory structure for shared pages
+
+Delete the following directories that contain content shared across multiple documentation distributions:
+
+- `/docs/home`
+- `/docs/community`
+- `/docs/robots_using`
+- `/docs/about_and_contact`
+
+Create new `/docs/shared` directory that will contain shared pages from the `rolling` branch. This serves as the destination for automatically cloned data used in the build process. Create a README.md file to ensure Git will track this empty directory.
+
+```shell
+mkdir -p docs/shared
+touch docs/shared/README.md
+cat > docs/shared/README.md << EOF
+The `docs/shared` directory is used to store cloned data from GitHub.
+It contains all common documentation pages that can be shared across multiple distributions.
+The content of this directory is taken from the Rolling branch as a main reference.
+
+
+> **Do not delete this file.** The README file keeps the empty directory under Git control.
+EOF
+```
+
+Update paths to the shared directories and files in the parent `docs/.nav.yml` configuration, for example:
+
+```yaml
+# From
+- Community: community
+
+# To:
+- Community: shared/docs.nav2.org/docs/community
+```
+
+Refer to the `.nav.yml` file in previously released versions (e.g., Lyrical, Jazzy) for the complete configuration example.
+
+### 3.2 Update links
 
 - Update all GitHub links to point to new distribution branch where it applies.
 - Update all links referring to ROS 2 Documentation.
@@ -95,7 +144,7 @@ github_repositories:
 
     **Lyrical**: [https://docs.ros.org/en/lyrical/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html](https://docs.ros.org/en/lyrical/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html)
 
-### 3.2 Review tutorials
+### 3.3 Review tutorials
 
 Review [tutorials][tutorials] for compatibility with the new distribution, including API and behavior changes.
 
