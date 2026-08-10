@@ -56,7 +56,7 @@ Similarly, you can install the Nav2 project in different ways:
     Once your environment is setup, clone the Nav2 repo, install all dependencies, and build the workspace:
 
     ```bash
-    NAV_DISTRO=${ROS_DISTRO; rolling/main}
+    NAV_DISTRO=${ROS_DISTRO/rolling/main}
     mkdir -p ~/nav2_ws/src && cd ~/nav2_ws
     git clone https://github.com/ros-navigation/navigation2.git --branch $NAV_DISTRO ./src/navigation2
     git clone https://github.com/ros-navigation/nav2_minimal_turtlebot_simulation.git --branch $NAV_DISTRO ./src/nav2_minimal_turtlebot_simulation

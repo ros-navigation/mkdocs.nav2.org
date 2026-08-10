@@ -20,7 +20,7 @@ Once your system is setup, you can build the Nav2 Dockerfile from the root of th
 ```bash
 export ROS_DISTRO=rolling # replace 'rolling' with your distribution version
 
-NAV_DISTRO=${ROS_DISTRO; rolling/main}
+NAV_DISTRO=${ROS_DISTRO/rolling/main}
 git clone https://github.com/ros-navigation/navigation2.git --branch $NAV_DISTRO
 docker build --tag navigation2:$ROS_DISTRO \
   --build-arg FROM_IMAGE=ros:$ROS_DISTRO \
