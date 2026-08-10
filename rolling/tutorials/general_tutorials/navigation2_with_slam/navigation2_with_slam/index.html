@@ -7485,10 +7485,10 @@ SUVORK5CYII=
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-launch-navigation2" class="md-nav__link">
+  <a href="#2-launch-nav2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Launch Navigation2
+        2. Launch Nav2
       
     </span>
   </a>
@@ -20487,10 +20487,10 @@ SUVORK5CYII=
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-launch-navigation2" class="md-nav__link">
+  <a href="#2-launch-nav2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Launch Navigation2
+        2. Launch Nav2
       
     </span>
   </a>
@@ -20657,10 +20657,10 @@ in overrides/partials/header.html -->
 <p>This document explains how to use Nav2 with SLAM.
 The following steps show ROS 2 users how to generate occupancy grid maps and use Nav2 to move their robot around.
 This tutorial applies to both simulated and physical robots, but will be completed here on a physical robot.</p>
-<p>Before completing this tutorial, completing the <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/quickstart/#quickstart">Quickstart</a> is highly recommended especially if you are new to ROS and Navigation2.</p>
+<p>Before completing this tutorial, completing the <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/quickstart/#quickstart">Quickstart</a> is highly recommended especially if you are new to ROS and Nav2.</p>
 <p>In this tutorial we'll be using SLAM Toolbox. More information can be found in the <a href="https://vimeo.com/378682207">ROSCon talk for SLAM Toolbox</a></p>
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link"></a></h2>
-<p>You must install Navigation2, Turtlebot3, and SLAM Toolbox.
+<p>You must install Nav2, Turtlebot3, and SLAM Toolbox.
 If you don't have them installed, please follow <a class="autorefs autorefs-internal" href="../../../../getting_started/quickstart/quickstart/#quickstart">Quickstart</a>.</p>
 <p>First, source your ROS 2 installation to set the environment variables:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><span class="nb">source</span><span class="w"> </span>/opt/ros/rolling/setup.bash
@@ -20690,7 +20690,7 @@ Typically, this includes the robot state publisher of the URDF, simulated or phy
 <p>Launch your robot's interface and robot state publisher, for example:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1">ros2<span class="w"> </span>launch<span class="w"> </span>turtlebot3_bringup<span class="w"> </span>robot.launch.py
 </span></code></pre></div>
-<h3 id="2-launch-navigation2">2. Launch Navigation2<a class="headerlink" href="#2-launch-navigation2" title="Permanent link"></a></h3>
+<h3 id="2-launch-nav2">2. Launch Nav2<a class="headerlink" href="#2-launch-nav2" title="Permanent link"></a></h3>
 <p>Launch Navigation without nav2_amcl and nav2_map_server.
 It is assumed that the SLAM node(s) will publish to /map topic and provide the map-&gt;odom transform.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1">ros2<span class="w"> </span>launch<span class="w"> </span>nav2_bringup<span class="w"> </span>navigation_launch.py

@@ -20433,9 +20433,21 @@ The Collision Monitor is a node providing an additional level of robot safety. I
 The Collision Detector works similarly to the Collision Monitor, but does not affect the robot's velocity. It will only inform that data from the configured sources has been detected within the configured polygons via a message to a topic.</p>
 <h2 id="provided-nodes">Provided Nodes<a class="headerlink" href="#provided-nodes" title="Permanent link"></a></h2>
 <p>The nodes listed below are inside the <code>nav2_collision_monitor</code> package. See the pages for individual configuration information.</p>
-<div class="grid">
-<p><a class="autorefs autorefs-internal md-button md-button--primary" href="configuring_collision_monitor_node/#collision-monitor-node">Collision Monitor Node</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="configuring_collision_detector_node/#collision-detector-node">Collision Detector Node</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5M11 7h2v6h-2m0 2h2v2h-2"></path></svg></span> <strong>Collision Monitor Node</strong></p>
+<hr>
+<p>Detects and prevents imminent collisions by limiting velocity commands.</p>
+<p><a class="autorefs autorefs-internal" title="Collision Monitor Node" href="configuring_collision_monitor_node/#collision-monitor-node"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m5.86 10.31C16.23 21.22 14.28 22.45 12 23c-2.56-.61-4.7-2.07-6.42-4.37C3.86 16.34 3 13.8 3 11V5l9-4 9 4v6c0 2.39-.64 4.61-1.92 6.67l-2.91-2.91c.52-.79.83-1.76.83-2.76a5 5 0 0 0-5-5 5 5 0 0 0-5 5 5 5 0 0 0 5 5c1 0 1.97-.31 2.76-.83z"></path></svg></span> <strong>Collision Detector Node</strong></p>
+<hr>
+<p>Reports detected collisions without modifying velocity commands.</p>
+<p><a class="autorefs autorefs-internal" title="Collision Detector Node" href="configuring_collision_detector_node/#collision-detector-node"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+</ul>
 </div>
 
 

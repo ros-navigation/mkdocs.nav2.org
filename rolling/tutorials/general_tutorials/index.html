@@ -20400,35 +20400,177 @@ in overrides/partials/header.html -->
 <!-- Page content -->
 <h1 id="general-tutorials">General Tutorials<a class="headerlink" href="#general-tutorials" title="Permanent link"></a></h1>
 <p>Nav2 Tutorials</p>
-<div class="grid">
-<p><a class="autorefs autorefs-internal md-button md-button--primary" href="navigation2_on_real_turtlebot3/navigation2_on_real_turtlebot3/#navigating-with-a-physical-turtlebot-3">Navigating with a Physical Turtlebot 3</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="navigation2_with_slam/navigation2_with_slam/#navigating-while-mapping-slam">Navigating while Mapping (SLAM)</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="navigation2_with_stvl/#using-an-external-costmap-plugin-stvl">Using an External Costmap Plugin (STVL)</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="navigation2_with_gps/navigation2_with_gps/#navigating-using-gps-localization">Navigating using GPS Localization</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="isaac_perceptor/#lidar-free-vision-based-navigation">Lidar-Free, Vision-Based Navigation</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="navigation2_with_semantic_segmentation/navigation2_with_semantic_segmentation/#navigating-with-semantic-segmentation-nvidia-jetson">Navigating with Semantic Segmentation (Nvidia Jetson)</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="navigation2_with_sam3_semantic_segmentation/navigation2_with_sam3_semantic_segmentation/#navigating-with-semantic-segmentation-sam3-amd-strix-halo">Navigating with Semantic Segmentation (SAM3, AMD Strix Halo)</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="groot_tutorials/#groot-tutorials">Groot Tutorials</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="integrating_vio/integrating_vio/#using-vio-to-augment-robot-odometry">Using VIO to Augment Robot Odometry</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="navigation2_dynamic_point_following/navigation2_dynamic_point_following/#dynamic-object-following">Dynamic Object Following</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="navigation2_with_keepout_filter/navigation2_with_keepout_filter/#navigating-with-keepout-zones">Navigating with Keepout Zones</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="navigation2_with_speed_filter/navigation2_with_speed_filter/#navigating-with-speed-limits">Navigating with Speed Limits</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="using_docking/#using-docking-server">Using Docking Server</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="using_shim_controller/#using-rotation-shim-controller">Using Rotation Shim Controller</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="adding_smoother/adding_smoother/#adding-a-smoother-to-a-bt">Adding a Smoother to a BT</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="using_collision_monitor/using_collision_monitor/#using-collision-monitor">Using Collision Monitor</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="adding_a_nav2_task_server/#adding-a-new-nav2-task-server">Adding a New Nav2 Task Server</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="filtering_of_noise_induced_obstacles/filtering_of_noise_induced_obstacles/#filtering-of-noise-induced-obstacles">Filtering of Noise-Induced Obstacles</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="camera_calibration/camera_calibration/#camera-calibration">Camera Calibration</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="get_backtrace/#get-backtrace-in-ros-2-nav2">Get Backtrace in ROS 2 / Nav2</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="get_profile/get_profile/#profiling-in-ros-2-nav2">Profiling in ROS 2 / Nav2</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="docker_dev/#docker-for-development-zero-to-hero">Docker for Development: Zero to Hero</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="route_server_tools/#route-server-tools">Route Server Tools</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="navigation2_with_vector_objects/navigation2_with_vector_objects/#navigating-with-vector-objects">Navigating with Vector Objects</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="roscon_uk_2025_state_estimation/#roscon-uk-2025-state-estimation-for-mobile-robotics-workshop">ROSCon UK 2025: State Estimation for Mobile Robotics Workshop</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="using_3laws_supervisor/using_3laws_supervisor/#enhanced-safety-for-nav2-using-3laws-supervisor">Enhanced Safety for Nav2 using 3Laws Supervisor</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="navigation2_with_ground_consistency_layer/navigation2_with_ground_consistency_layer/#ground-terrain-segmentation-using-3d-lidar">Ground Terrain Segmentation using 3D Lidar</a>
-<a class="autorefs autorefs-internal md-button md-button--primary" href="depth_ai_integration/depth_ai_integration/#ai-depth-estimation-with-nav2-costmap">AI Depth Estimation with Nav2 Costmap</a></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2M7.5 13A2.5 2.5 0 0 0 5 15.5 2.5 2.5 0 0 0 7.5 18a2.5 2.5 0 0 0 2.5-2.5A2.5 2.5 0 0 0 7.5 13m9 0a2.5 2.5 0 0 0-2.5 2.5 2.5 2.5 0 0 0 2.5 2.5 2.5 2.5 0 0 0 2.5-2.5 2.5 2.5 0 0 0-2.5-2.5"></path></svg></span> <strong>Navigating with a Physical Turtlebot 3</strong></p>
+<hr>
+<p>Deploy Nav2 on real Turtlebot3 hardware.</p>
+<p><a class="autorefs autorefs-internal" title="Navigating with a Physical Turtlebot 3" href="navigation2_on_real_turtlebot3/navigation2_on_real_turtlebot3/#navigating-with-a-physical-turtlebot-3"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3 3.36 4.9c-.2.07-.36.25-.36.48V20.5a.5.5 0 0 0 .5.5c.05 0 .1 0 .16-.03L9 18.9l4.16 1.46c-.1-.44-.16-.9-.16-1.36 0-.23 0-.46.04-.7L9 16.9V5l6 2.1v7.46c1.07-.96 2.47-1.56 4-1.56.7 0 1.37.13 2 .36V3.5a.5.5 0 0 0-.5-.5h-.16L15 5.1zm9 12v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg></span> <strong>Navigating while Mapping (SLAM)</strong></p>
+<hr>
+<p>Simultaneous navigation and map building.</p>
+<p><a class="autorefs autorefs-internal" title="Navigating while Mapping (SLAM)" href="navigation2_with_slam/navigation2_with_slam/#navigating-while-mapping-slam"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 22v-2h3v-3h2v3.5c0 .39-.16.74-.46 1.04s-.65.46-1.04.46zM7 22H3.5c-.39 0-.74-.16-1.04-.46S2 20.89 2 20.5V17h2v3h3zM17 2h3.5c.39 0 .74.16 1.04.46s.46.65.46 1.04V7h-2V4h-3zM7 2v2H4v3H2V3.5c0-.39.16-.74.46-1.04S3.11 2 3.5 2zm6 15.25 4-2.3v-4.59l-4 2.3zm-1-6.33 4-2.29-4-2.35-4 2.35zm-5 4.03 4 2.3v-4.59l-4-2.3zm11.23-7.36c.5.32.77.75.77 1.32v6.32c0 .57-.27 1-.77 1.32l-5.48 3.18q-.75.48-1.5 0l-5.48-3.18c-.5-.32-.77-.75-.77-1.32V8.91c0-.57.27-1 .77-1.32l5.48-3.18c.25-.13.5-.19.75-.19s.5.06.75.19z"></path></svg></span> <strong>Using an External Costmap Plugin (STVL)</strong></p>
+<hr>
+<p>Integrate Spatio-Temporal Voxel Layer for 3D perception.</p>
+<p><a class="autorefs autorefs-internal" title="Using an External Costmap Plugin (STVL)" href="navigation2_with_stvl/#using-an-external-costmap-plugin-stvl"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m-8.95 5H1v-2h2.05C3.5 6.83 6.83 3.5 11 3.05V1h2v2.05c4.17.45 7.5 3.78 7.95 7.95H23v2h-2.05c-.45 4.17-3.78 7.5-7.95 7.95V23h-2v-2.05C6.83 20.5 3.5 17.17 3.05 13M12 5a7 7 0 0 0-7 7 7 7 0 0 0 7 7 7 7 0 0 0 7-7 7 7 0 0 0-7-7"></path></svg></span> <strong>Navigating using GPS Localization</strong></p>
+<hr>
+<p>Outdoor navigation with GPS waypoints.</p>
+<p><a class="autorefs autorefs-internal" title="Navigating using GPS Localization" href="navigation2_with_gps/navigation2_with_gps/#navigating-using-gps-localization"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m8 3a5 5 0 0 0-5 5 5 5 0 0 0 5 5 5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 2a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3"></path></svg></span> <strong>Lidar-Free, Vision-Based Navigation</strong></p>
+<hr>
+<p>Navigate using only cameras using Nvidia Isaac ROS.</p>
+<p><a class="autorefs autorefs-internal" title="Lidar-Free, Vision-Based Navigation" href="isaac_perceptor/#lidar-free-vision-based-navigation"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 20h12q1.88 0 3.19-1.31T23 15.5q0-1.7-1.21-3.1T19 11q0-2.95-2-4.97Q14.95 4 12 4 9.88 4 8.29 5.08 6.7 6.15 6.25 8q2.55.45 4.15 2.19T12 14.5h-2q0-1.82-1.34-3.16Q7.33 10 5.5 10t-3.16 1.34Q1 12.68 1 14.5q0 2.3 1.6 3.9T6.5 20"></path></svg></span> <strong>Navigating with Semantic Segmentation (Nvidia Jetson)</strong></p>
+<hr>
+<p>AI-based semantic segmentation navigation.</p>
+<p><a class="autorefs autorefs-internal" title="Navigating with Semantic Segmentation (Nvidia Jetson)" href="navigation2_with_semantic_segmentation/navigation2_with_semantic_segmentation/#navigating-with-semantic-segmentation-nvidia-jetson"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.5 20h12q1.88 0 3.19-1.31T23 15.5q0-1.7-1.21-3.1T19 11q0-2.95-2-4.97Q14.95 4 12 4 9.88 4 8.29 5.08 6.7 6.15 6.25 8q2.55.45 4.15 2.19T12 14.5h-2q0-1.82-1.34-3.16Q7.33 10 5.5 10t-3.16 1.34Q1 12.68 1 14.5q0 2.3 1.6 3.9T6.5 20"></path></svg></span> <strong>Navigating with Semantic Segmentation (SAM3, AMD Strix Halo)</strong></p>
+<hr>
+<p>AI-based semantic navigation using SAM3.</p>
+<p><a class="autorefs autorefs-internal" title="Navigating with Semantic Segmentation (SAM3, AMD Strix Halo)" href="navigation2_with_sam3_semantic_segmentation/navigation2_with_sam3_semantic_segmentation/#navigating-with-semantic-segmentation-sam3-amd-strix-halo"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3h6v4H3zm12 7h6v4h-6zm0 7h6v4h-6zm-2-4H7v5h6v2H5V9h2v2h6z"></path></svg></span> <strong>Groot Tutorials</strong></p>
+<hr>
+<p>Visualize and edit behavior trees with Groot.</p>
+<p><a class="autorefs autorefs-internal" title="Groot Tutorials" href="groot_tutorials/#groot-tutorials"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"></path></svg></span> <strong>Using VIO to Augment Robot Odometry</strong></p>
+<hr>
+<p>Visual-inertial odometry fusion for improved state estimation.</p>
+<p><a class="autorefs autorefs-internal" title="Using VIO to Augment Robot Odometry" href="integrating_vio/integrating_vio/#using-vio-to-augment-robot-odometry"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.95 11h1.55v2h-1.55c-.45 4.17-3.78 7.5-7.95 7.95v1.55h-2v-1.55C6.83 20.5 3.5 17.17 3.05 13H1.5v-2h1.55C3.5 6.83 6.83 3.5 11 3.05V1.5h2v1.55c4.17.45 7.5 3.78 7.95 7.95M5.07 11H6.5v2H5.07A6.98 6.98 0 0 0 11 18.93V17.5h2v1.43A6.98 6.98 0 0 0 18.93 13H17.5v-2h1.43A6.98 6.98 0 0 0 13 5.07V6.5h-2V5.07A6.98 6.98 0 0 0 5.07 11M16 16H8v-1c0-1.33 2.67-2 4-2s4 .67 4 2zm-4-8a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2"></path></svg></span> <strong>Dynamic Object Following</strong></p>
+<hr>
+<p>Track and follow moving objects.</p>
+<p><a class="autorefs autorefs-internal" title="Dynamic Object Following" href="navigation2_dynamic_point_following/navigation2_dynamic_point_following/#dynamic-object-following"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c5.5 0 10 4.5 10 10s-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2m0 2c-1.9 0-3.6.6-4.9 1.7l11.2 11.2c1-1.4 1.7-3.1 1.7-4.9 0-4.4-3.6-8-8-8m4.9 14.3L5.7 7.1C4.6 8.4 4 10.1 4 12c0 4.4 3.6 8 8 8 1.9 0 3.6-.6 4.9-1.7"></path></svg></span> <strong>Navigating with Keepout Zones</strong></p>
+<hr>
+<p>Restrict robot access to designated areas.</p>
+<p><a class="autorefs autorefs-internal" title="Navigating with Keepout Zones" href="navigation2_with_keepout_filter/navigation2_with_keepout_filter/#navigating-with-keepout-zones"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16c1.66 0 3-1.34 3-3 0-1.12-.61-2.1-1.5-2.61L3.79 4.77l5.53 9.58c.5.98 1.51 1.65 2.68 1.65m0-13c-1.81 0-3.5.5-4.97 1.32l2.1 1.21C10 5.19 11 5 12 5c4.42 0 8 3.58 8 8 0 2.21-.89 4.21-2.34 5.65h-.01a.996.996 0 0 0 0 1.41c.39.39 1.03.39 1.42.01A9.97 9.97 0 0 0 22 13c0-5.5-4.5-10-10-10M2 13c0 2.76 1.12 5.26 2.93 7.07.39.38 1.02.38 1.41-.01a.996.996 0 0 0 0-1.41A7.95 7.95 0 0 1 4 13c0-1 .19-2 .54-2.9L3.33 8C2.5 9.5 2 11.18 2 13"></path></svg></span> <strong>Navigating with Speed Limits</strong></p>
+<hr>
+<p>Enforce variable speed limits across the environment.</p>
+<p><a class="autorefs autorefs-internal" title="Navigating with Speed Limits" href="navigation2_with_speed_filter/navigation2_with_speed_filter/#navigating-with-speed-limits"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17.3 5C19 6.5 20 8.6 20 11c0 4.4-3.6 8-8 8s-8-3.6-8-8c0-2.4 1.1-4.5 2.7-6zm.7-2H6l-.6.5C3.2 5.4 2 8.1 2 11c0 5.5 4.5 10 10 10s10-4.5 10-10c0-2.9-1.2-5.6-3.4-7.5zm-5 4.5c0 .8.7 1.5 1.5 1.5S16 8.3 16 7.5 15.3 6 14.5 6 13 6.7 13 7.5m-5 0C8 8.3 8.7 9 9.5 9S11 8.3 11 7.5 10.3 6 9.5 6 8 6.7 8 7.5M7 13c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m4.5 2c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2m.5-2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2m4.5 2c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2m2.5-4c0-1.1-.9-2-2-2s-2 .9-2 2 .9 2 2 2 2-.9 2-2"></path></svg></span> <strong>Using Docking Server</strong></p>
+<hr>
+<p>Autonomous charging and static infrastructure docking.</p>
+<p><a class="autorefs autorefs-internal" title="Using Docking Server" href="using_docking/#using-docking-server"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m16.89 15.5 1.42 1.39c.9-1.16 1.45-2.5 1.62-3.89h-2.02c-.14.87-.48 1.72-1.02 2.5M13 17.9v2.02c1.39-.17 2.74-.71 3.9-1.61l-1.44-1.44c-.75.54-1.59.89-2.46 1.03m6.93-6.9a7.9 7.9 0 0 0-1.62-3.89l-1.42 1.42c.54.75.88 1.6 1.02 2.47m-2.36-5.45L11 1v3.07C7.06 4.56 4 7.92 4 12s3.05 7.44 7 7.93v-2.02c-2.84-.48-5-2.94-5-5.91s2.16-5.43 5-5.91V10z"></path></svg></span> <strong>Using Rotation Shim Controller</strong></p>
+<hr>
+<p>Rotate-in-place before path following.</p>
+<p><a class="autorefs autorefs-internal" title="Using Rotation Shim Controller" href="using_shim_controller/#using-rotation-shim-controller"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12c-1.39 0-2.78-.47-4-1.33-2.44 1.71-5.56 1.71-8 0C6.78 11.53 5.39 12 4 12H2v2h2c1.37 0 2.74-.35 4-1 2.5 1.3 5.5 1.3 8 0 1.26.65 2.62 1 4 1h2v-2"></path></svg></span> <strong>Adding a Smoother to a BT</strong></p>
+<hr>
+<p>Integrate path smoothing into behavior trees.</p>
+<p><a class="autorefs autorefs-internal" title="Adding a Smoother to a BT" href="adding_smoother/adding_smoother/#adding-a-smoother-to-a-bt"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5M11 7h2v6h-2m0 2h2v2h-2"></path></svg></span> <strong>Using Collision Monitor</strong></p>
+<hr>
+<p>Configure real-time collision monitoring.</p>
+<p><a class="autorefs autorefs-internal" title="Using Collision Monitor" href="using_collision_monitor/using_collision_monitor/#using-collision-monitor"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1m5 4h1V6H9zM5 6v2h2V6zm3 10h3v-3h2v3h3v2h-3v3h-2v-3H8z"></path></svg></span> <strong>Adding a New Nav2 Task Server</strong></p>
+<hr>
+<p>Build a custom task server for application-specific behaviors.</p>
+<p><a class="autorefs autorefs-internal" title="Adding a New Nav2 Task Server" href="adding_a_nav2_task_server/#adding-a-new-nav2-task-server"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 8.5a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5A1.5 1.5 0 0 0 14 8.5m0 4a1.5 1.5 0 0 0-1.5 1.5 1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5M10 17a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0-8.5A1.5 1.5 0 0 0 8.5 10a1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5A1.5 1.5 0 0 0 10 8.5m4 12a.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5m0-3.5a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m7-3.5a.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5M18 5a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0 4a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0 8a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0-4a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m-8-.5A1.5 1.5 0 0 0 8.5 14a1.5 1.5 0 0 0 1.5 1.5 1.5 1.5 0 0 0 1.5-1.5 1.5 1.5 0 0 0-1.5-1.5M10 7a1 1 0 0 0 1-1 1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1m0-3.5a.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5m0 17a.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5m-7-7a.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5m11-10a.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5M14 7a1 1 0 0 0 1-1 1 1 0 0 0-1-1 1 1 0 0 0-1 1 1 1 0 0 0 1 1m7 3.5a.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5M6 5a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1M3 9.5a.5.5 0 0 0-.5.5.5.5 0 0 0 .5.5.5.5 0 0 0 .5-.5.5.5 0 0 0-.5-.5M6 9a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0 8a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m0-4a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1"></path></svg></span> <strong>Filtering of Noise-Induced Obstacles</strong></p>
+<hr>
+<p>Remove false positive obstacles from noisy sensors.</p>
+<p><a class="autorefs autorefs-internal" title="Filtering of Noise-Induced Obstacles" href="filtering_of_noise_induced_obstacles/filtering_of_noise_induced_obstacles/#filtering-of-noise-induced-obstacles"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2m0 2v12h16V6zm8 4.5a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5"></path></svg></span> <strong>Camera Calibration</strong></p>
+<hr>
+<p>Calibrate cameras for accurate depth and pose estimation.</p>
+<p><a class="autorefs autorefs-internal" title="Camera Calibration" href="camera_calibration/camera_calibration/#camera-calibration"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 12h-4v-2h4m0 6h-4v-2h4m6-6h-2.81a6 6 0 0 0-1.82-1.96L17 4.41 15.59 3l-2.17 2.17a6 6 0 0 0-2.83 0L8.41 3 7 4.41l1.62 1.63C7.88 6.55 7.26 7.22 6.81 8H4v2h2.09c-.05.33-.09.66-.09 1v1H4v2h2v1c0 .34.04.67.09 1H4v2h2.81c1.04 1.79 2.97 3 5.19 3s4.15-1.21 5.19-3H20v-2h-2.09c.05-.33.09-.66.09-1v-1h2v-2h-2v-1c0-.34-.04-.67-.09-1H20z"></path></svg></span> <strong>Get Backtrace in ROS 2 / Nav2</strong></p>
+<hr>
+<p>Debug crashes with GDB backtraces.</p>
+<p><a class="autorefs autorefs-internal" title="Get Backtrace in ROS 2 / Nav2" href="get_backtrace/#get-backtrace-in-ros-2-nav2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 21H2V3h2v16h2v-9h4v9h2V6h4v13h2v-5h4z"></path></svg></span> <strong>Profiling in ROS 2 / Nav2</strong></p>
+<hr>
+<p>Profile CPU and memory performance.</p>
+<p><a class="autorefs autorefs-internal" title="Profiling in ROS 2 / Nav2" href="get_profile/get_profile/#profiling-in-ros-2-nav2"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.81 10.25c-.06-.04-.56-.43-1.64-.43-.28 0-.56.03-.84.08-.21-1.4-1.38-2.11-1.43-2.14l-.29-.17-.18.27c-.24.36-.43.77-.51 1.19-.2.8-.08 1.56.33 2.21-.49.28-1.29.35-1.46.35H2.62c-.34 0-.62.28-.62.63 0 1.15.18 2.3.58 3.38.45 1.19 1.13 2.07 2 2.61.98.6 2.59.94 4.42.94.79 0 1.61-.07 2.42-.22 1.12-.2 2.2-.59 3.19-1.16A8.3 8.3 0 0 0 16.78 16c1.05-1.17 1.67-2.5 2.12-3.65h.19c1.14 0 1.85-.46 2.24-.85.26-.24.45-.53.59-.87l.08-.24zm-17.96.99h1.76c.08 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16H3.85c-.09 0-.16.07-.16.16v1.58c.01.09.07.16.16.16m2.43 0h1.76c.08 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16H6.28c-.09 0-.16.07-.16.16v1.58c.01.09.07.16.16.16m2.47 0h1.75c.1 0 .17-.07.17-.16V9.5c0-.08-.06-.16-.17-.16H8.75c-.08 0-.15.07-.15.16v1.58c0 .09.06.16.15.16m2.44 0h1.77c.08 0 .15-.07.15-.16V9.5c0-.08-.06-.16-.15-.16h-1.77c-.08 0-.15.07-.15.16v1.58c0 .09.07.16.15.16M6.28 9h1.76c.08 0 .16-.09.16-.18V7.25c0-.09-.07-.16-.16-.16H6.28c-.09 0-.16.06-.16.16v1.57c.01.09.07.18.16.18m2.47 0h1.75c.1 0 .17-.09.17-.18V7.25c0-.09-.06-.16-.17-.16H8.75c-.08 0-.15.06-.15.16v1.57c0 .09.06.18.15.18m2.44 0h1.77c.08 0 .15-.09.15-.18V7.25c0-.09-.07-.16-.15-.16h-1.77c-.08 0-.15.06-.15.16v1.57c0 .09.07.18.15.18m0-2.28h1.77c.08 0 .15-.07.15-.16V5c0-.1-.07-.17-.15-.17h-1.77c-.08 0-.15.06-.15.17v1.56c0 .08.07.16.15.16m2.46 4.52h1.76c.09 0 .16-.07.16-.16V9.5c0-.08-.07-.16-.16-.16h-1.76c-.08 0-.15.07-.15.16v1.58c0 .09.07.16.15.16"></path></svg></span> <strong>Docker for Development: Zero to Hero</strong></p>
+<hr>
+<p>Complete Docker workflow for Nav2 development.</p>
+<p><a class="autorefs autorefs-internal" title="Docker for Development: Zero to Hero" href="docker_dev/#docker-for-development-zero-to-hero"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19.5 17c-.13 0-.26 0-.39.04l-1.61-3.25a2.5 2.5 0 0 0-1.75-4.29c-.13 0-.25 0-.39.04l-1.63-3.25c.48-.45.77-1.08.77-1.79a2.5 2.5 0 0 0-5 0c0 .71.29 1.34.76 1.79L8.64 9.54c-.14-.04-.26-.04-.39-.04a2.5 2.5 0 0 0-1.75 4.29l-1.61 3.25C4.76 17 4.63 17 4.5 17a2.5 2.5 0 0 0 0 5A2.5 2.5 0 0 0 7 19.5c0-.7-.29-1.34-.76-1.79l1.62-3.25c.14.04.26.04.39.04s.25 0 .39-.04l1.63 3.25c-.47.45-.77 1.09-.77 1.79a2.5 2.5 0 0 0 5 0A2.5 2.5 0 0 0 12 17c-.13 0-.26 0-.39.04L10 13.79c.46-.45.75-1.08.75-1.79s-.29-1.34-.75-1.79l1.61-3.25c.13.04.26.04.39.04s.26 0 .39-.04L14 10.21c-.45.45-.75 1.09-.75 1.79a2.5 2.5 0 0 0 2.5 2.5c.13 0 .25 0 .39-.04l1.63 3.25c-.47.45-.77 1.09-.77 1.79a2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0-2.5-2.5"></path></svg></span> <strong>Route Server Tools</strong></p>
+<hr>
+<p>Create and edit route graphs for graph-based navigation.</p>
+<p><a class="autorefs autorefs-internal" title="Route Server Tools" href="route_server_tools/#route-server-tools"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 2v6h2.28l1.29 8H4v6h6v-1.94l5-.01V22h6v-6h-1.83L20 9h2V3h-6v3.53L14.8 8H9.59L8 5.82V2M4 4h2v2H4m14-1h2v2h-2M6.31 8h.8L9 10.59V14h6v-3.09L16.57 9H18l-.84 7H15v2.06h-5V16H7.6m3.4-6h2v2h-2m-5 6h2v2H6m11-2h2v2h-2"></path></svg></span> <strong>Navigating with Vector Objects</strong></p>
+<hr>
+<p>Use dynamic geometric objects in costmaps.</p>
+<p><a class="autorefs autorefs-internal" title="Navigating with Vector Objects" href="navigation2_with_vector_objects/navigation2_with_vector_objects/#navigating-with-vector-objects"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>ROSCon UK 2025: State Estimation Workshop</strong></p>
+<hr>
+<p>Hands-on state estimation workshop materials.</p>
+<p><a class="autorefs autorefs-internal" title="ROSCon UK 2025: State Estimation for Mobile Robotics Workshop" href="roscon_uk_2025_state_estimation/#roscon-uk-2025-state-estimation-for-mobile-robotics-workshop"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m10 17-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9m-6-8L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5z"></path></svg></span> <strong>Enhanced Safety with 3Laws Supervisor</strong></p>
+<hr>
+<p>Third-party safety supervisor integration.</p>
+<p><a class="autorefs autorefs-internal" title="Enhanced Safety for Nav2 using 3Laws Supervisor" href="using_3laws_supervisor/using_3laws_supervisor/#enhanced-safety-for-nav2-using-3laws-supervisor"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14 6-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22z"></path></svg></span> <strong>Ground Terrain Segmentation using 3D Lidar</strong></p>
+<hr>
+<p>Classify traversable terrain from 3D pointclouds.</p>
+<p><a class="autorefs autorefs-internal" title="Ground Terrain Segmentation using 3D Lidar" href="navigation2_with_ground_consistency_layer/navigation2_with_ground_consistency_layer/#ground-terrain-segmentation-using-3d-lidar"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5.36 0 .72 0 1.08-.05a6 6 0 0 1-.08-.95c0-.56.08-1.12.24-1.66-.41.1-.82.16-1.24.16a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5c0 .29-.03.59-.08.88.66-.25 1.37-.38 2.08-.38 1.17 0 2.31.34 3.29 1 .27-.5.51-1 .71-1.5-1.73-4.39-6-7.5-11-7.5M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m6 5.5v3h-3v2h3v3h2v-3h3v-2h-3v-3z"></path></svg></span> <strong>AI Depth Estimation with Nav2 Costmap</strong></p>
+<hr>
+<p>ML-based monocular depth for costmap obstacle detection.</p>
+<p><a class="autorefs autorefs-internal" title="AI Depth Estimation with Nav2 Costmap" href="depth_ai_integration/depth_ai_integration/#ai-depth-estimation-with-nav2-costmap"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Go</a></p>
+</li>
+</ul>
 </div>
 
 

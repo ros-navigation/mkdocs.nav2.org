@@ -9548,10 +9548,10 @@ SUVORK5CYII=
 </li>
       
         <li class="md-nav__item">
-  <a href="#transforms-in-navigation2" class="md-nav__link">
+  <a href="#transforms-in-nav2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Transforms in Navigation2
+        Transforms in Nav2
       
     </span>
   </a>
@@ -20414,10 +20414,10 @@ SUVORK5CYII=
 </li>
       
         <li class="md-nav__item">
-  <a href="#transforms-in-navigation2" class="md-nav__link">
+  <a href="#transforms-in-nav2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Transforms in Navigation2
+        Transforms in Nav2
       
     </span>
   </a>
@@ -20601,7 +20601,7 @@ in overrides/partials/header.html -->
 <p class="admonition-title">See also</p>
 <p>If you would like to learn more about TF2 and how to create your own transform publishers, head onto the official <a href="https://wiki.ros.org/tf2/Tutorials">TF2 Documentation</a></p>
 </div>
-<h2 id="transforms-in-navigation2">Transforms in Navigation2<a class="headerlink" href="#transforms-in-navigation2" title="Permanent link"></a></h2>
+<h2 id="transforms-in-nav2">Transforms in Nav2<a class="headerlink" href="#transforms-in-nav2" title="Permanent link"></a></h2>
 <p>There are two important ROS REPs which we highly suggest for you to check out. These documents detail some standards set about by the ROS community to ensure proper operation across different packages. Nav2 also adheres to these standards and conventions.</p>
 <ol>
 <li><a href="https://www.ros.org/reps/rep-0105.html">REP 105 - Coordinate Frames for Mobile Platforms</a></li>
@@ -20609,7 +20609,7 @@ in overrides/partials/header.html -->
 </ol>
 <p>To quickly summarize REP 105, this document specifies the naming conventions and semantic meanings of the different coordinate frames used in ROS. Of interest to this tutorial are the <code>base_link</code>, <code>odom</code> and <code>map</code> coordinate frames. The <code>base_link</code> is a coordinate frame that is attached to a fixed position on the robot, typically at its main chassis and its rotational center. The <code>odom</code> coordinate frame is a fixed frame relative to the robot's starting position and is mainly used for locally-consistent representations of distances. Lastly, the <code>map</code> coordinate frame is a world fixed frame that is used for globally-consistent representations of distances.</p>
 <p>REP 103, on the other hand, discusses some standard units of measure and other related conventions to keep integration issues between different ROS packages to a minimum. The basic overview is that frames are defined using the right hand rule, with Z up and X forward, and units should be standard SI units.</p>
-<p>Now let's move on to some specifics for the Navigation2 package to function correctly. Nav2 requires the following transformations to be published in ROS:</p>
+<p>Now let's move on to some specifics for the Nav2 package to function correctly. Nav2 requires the following transformations to be published in ROS:</p>
 <ol>
 <li><code>map</code> =&gt; <code>odom</code></li>
 <li><code>odom</code> =&gt; <code>base_link</code></li>
