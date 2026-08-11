@@ -62,12 +62,11 @@ Update link for `edit_uri` key in `mkdocs.yml` configuration file:
 edit_uri: https://github.com/ros-navigation/docs.nav2.org/blob/<distro>/docs/
 ```
 
-Update `ros2_distro` variable and `homepage` parameter in `mkdocs.yml`:
+Update `ros2_distro` variable in `mkdocs.yml`:
 
 ```yaml
 extra:
   ros2_distro: "<distro>"
-  homepage: shared/docs.nav2.org/docs/home/ # This is required for point 3.1
 ```
 
 Update `branch` variable and include the new cloning source in `macros/variables.yml`:
@@ -85,7 +84,6 @@ github_repositories:
     branch: "rolling" # keep unchanged between distributions
     destination_dir: "docs/shared"
     data_to_clone:
-      - "/docs/home"
       - "/docs/community"
       - "/docs/robots_using"
       - "/docs/about_and_contact"
@@ -97,7 +95,6 @@ github_repositories:
 
 Delete the following directories that contain content shared across multiple documentation distributions:
 
-- `/docs/home`
 - `/docs/community`
 - `/docs/robots_using`
 - `/docs/about_and_contact`
@@ -128,6 +125,26 @@ Update paths to the shared directories and files in the parent `docs/.nav.yml` c
 ```
 
 Refer to the `.nav.yml` file in previously released versions (e.g., Lyrical, Jazzy) for the complete configuration example.
+
+Update paths to all robot images and shared page in the `docs/index.md` file, for example:
+```html
+<div class="robots-marquee">
+  <div class="robots-marquee-track">
+    <a href="shared/mkdocs.nav2.org/docs/robots_using/"><img src="shared/mkdocs.nav2.org/docs/robots_using/images/dexory.png" alt="Dexory"></a>
+    ...
+```
+
+For quick search and replace, the following snippets can be used:
+
+Search:
+```
+href="robots_using/"><img src="robots_using/images/
+```
+
+Replace:
+```
+href="shared/mkdocs.nav2.org/docs/robots_using/"><img src="shared/mkdocs.nav2.org/docs/robots_using/images/
+```
 
 ### 3.2 Update links
 
