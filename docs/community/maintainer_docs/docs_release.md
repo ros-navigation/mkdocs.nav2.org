@@ -114,23 +114,61 @@ The content of this directory is taken from the Rolling branch as a main referen
 EOF
 ```
 
-Update paths to the shared directories and files in the parent `docs/.nav.yml` configuration, for example:
+Update paths to the shared directories and files in the parent `docs/.nav.yml` configuration. The complete configuration should look as shown below:
 
 ```yaml
-# From
-- Community: community
-
-# To:
-- Community: shared/docs.nav2.org/docs/community
+nav:
+  - Home:
+    # The Home page displays the first two levels of the navigation structure
+    # with manually specified links to each page for quick access.
+    # Update this section whenever the documentation directory structure or page order changes.
+    - index.md
+    - Getting Started:
+      - getting_started/index.md
+      - Quickstart: getting_started/quickstart/quickstart.md
+      - Build and Install: getting_started/build_and_install/index.md
+      - Dev Container: getting_started/dev_container/index.md
+      - Navigation Concepts: getting_started/navigation_concepts/index.md
+      - Nav2 Behavior Trees: getting_started/nav2_behavior_trees/index.md
+    - Tutorials:
+      - tutorials/index.md
+      - Plugin Tutorials: tutorials/plugin_tutorials/index.md
+      - General Tutorials: tutorials/general_tutorials/index.md
+    - Configuration & Development:
+      - configuration_and_development/index.md
+      - First-Time Robot Setup Guide: configuration_and_development/first_time_robot_setup_guide/index.md
+      - Navigation Plugins: configuration_and_development/navigation_plugins.md
+      - Configuration Guide: configuration_and_development/configuration_guide/index.md
+      - Tuning Guide: configuration_and_development/tuning_guide.md
+      - Simple Commander API: configuration_and_development/simple_commander_api/simple_commander_api.md
+      - Migration Guides: configuration_and_development/migration_guides/index.md
+      - API Docs: https://api.nav2.org/
+    - Community:
+      - shared/docs.nav2.org/docs/community/index.md
+      - Getting Involved: shared/docs.nav2.org/docs/community/getting_involved.md
+      - Maintainer Docs: shared/docs.nav2.org/docs/community/maintainer_docs/index.md
+      - Roadmaps: shared/docs.nav2.org/docs/community/roadmaps.md
+      - ROSCon Talks: shared/docs.nav2.org/docs/community/roscon_talks.md
+    - Robots Using:
+      - shared/docs.nav2.org/docs/robots_using/index.md
+    - About & Contact:
+      - shared/docs.nav2.org/docs/about_and_contact/index.md
+      - Related Projects: shared/docs.nav2.org/docs/about_and_contact/related_projects.md
+      - Citations: shared/docs.nav2.org/docs/about_and_contact/citations.md
+  - Getting Started: getting_started
+  - Tutorials: tutorials
+  - Configuration & Development: configuration_and_development
+  - Community: shared/docs.nav2.org/docs/community
+  - Robots Using:
+    - shared/docs.nav2.org/docs/robots_using/index.md
+  - About & Contact: shared/docs.nav2.org/docs/about_and_contact
 ```
-
-Refer to the `.nav.yml` file in previously released versions (e.g., Lyrical, Jazzy) for the complete configuration example.
 
 Update paths to all robot images and shared page in the `docs/index.md` file, for example:
 ```html
 <div class="robots-marquee">
   <div class="robots-marquee-track">
-    <a href="shared/mkdocs.nav2.org/docs/robots_using/"><img src="shared/mkdocs.nav2.org/docs/robots_using/images/dexory.png" alt="Dexory"></a>
+    <a href="shared/docs.nav2.org/docs/robots_using/"><img src="shared/docs.nav2.org/docs/robots_using/images/dexory.png" alt="Dexory"></a>
     ...
 ```
 
@@ -143,7 +181,7 @@ href="robots_using/"><img src="robots_using/images/
 
 Replace:
 ```
-href="shared/mkdocs.nav2.org/docs/robots_using/"><img src="shared/mkdocs.nav2.org/docs/robots_using/images/
+href="shared/docs.nav2.org/docs/robots_using/"><img src="shared/docs.nav2.org/docs/robots_using/images/
 ```
 
 ### 3.2 Update links
