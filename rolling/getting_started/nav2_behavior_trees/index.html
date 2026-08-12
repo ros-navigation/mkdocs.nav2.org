@@ -20399,7 +20399,38 @@ in overrides/partials/header.html -->
 
 <!-- Page content -->
 <h1 id="nav2-behavior-trees">Nav2 Behavior Trees<a class="headerlink" href="#nav2-behavior-trees" title="Permanent link"></a></h1>
-<div class="grid cards">
+<p>Nav2 is an incredibly reconfigurable project. It allows users to set many different plugin types, across behavior trees, core algorithms, status checkers, and more!
+This section highlights some of the example behavior tree xml files provided by default in the project to do interesting tasks.
+It should be noted that these can be modified for your specific application, or used as a guide to building your own application-specific behavior tree.
+These are some exemplary examples of how you can reconfigure your navigation behavior significantly by using behavior trees.
+Other behavior trees are provided by Nav2 in the <code>nav2_bt_navigator</code> package, but this section highlights the important ones.</p>
+<p>A <strong>very</strong> basic, but functional, navigator can be seen below.</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><span class="nt">&lt;root</span><span class="w"> </span><span class="na">main_tree_to_execute=</span><span class="s">"MainTree"</span><span class="nt">&gt;</span>
+</span><span id="__span-0-2"><span class="w">  </span><span class="nt">&lt;BehaviorTree</span><span class="w"> </span><span class="na">ID=</span><span class="s">"MainTree"</span><span class="nt">&gt;</span>
+</span><span id="__span-0-3"><span class="w">    </span><span class="nt">&lt;PipelineSequence</span><span class="w"> </span><span class="na">name=</span><span class="s">"NavigateWithReplanning"</span><span class="nt">&gt;</span>
+</span><span id="__span-0-4"><span class="w">      </span><span class="nt">&lt;DistanceController</span><span class="w"> </span><span class="na">distance=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
+</span><span id="__span-0-5"><span class="w">        </span><span class="nt">&lt;ComputePathToPose</span><span class="w"> </span><span class="na">goal=</span><span class="s">"{goal}"</span><span class="w"> </span><span class="na">path=</span><span class="s">"{path}"</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-6"><span class="w">      </span><span class="nt">&lt;/DistanceController&gt;</span>
+</span><span id="__span-0-7"><span class="w">      </span><span class="nt">&lt;FollowPath</span><span class="w"> </span><span class="na">path=</span><span class="s">"{path}"</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-8"><span class="w">    </span><span class="nt">&lt;/PipelineSequence&gt;</span>
+</span><span id="__span-0-9"><span class="w">  </span><span class="nt">&lt;/BehaviorTree&gt;</span>
+</span><span id="__span-0-10"><span class="nt">&lt;/root&gt;</span>
+</span></code></pre></div>
+<p>This behavior tree will simply plan a new path to <code>goal</code> every 1 meter (set by <code>DistanceController</code>) using <code>ComputePathToPose</code>.
+If a new path is computed on the <code>path</code> blackboard variable, <code>FollowPath</code> will take this <code>path</code> and follow it using the server's default algorithm.</p>
+<p>This tree contains:</p>
+<ul>
+<li>No recovery methods</li>
+<li>No retries on failure</li>
+<li>No selected planner or controller algorithms</li>
+<li>No nodes to contextually change settings for optimal performance</li>
+<li>No integration with automatic door, elevator, or other APIs</li>
+<li>No user provided custom BT nodes</li>
+<li>No subtrees for other behaviors like docking, following, etc.</li>
+<li>No use of other types of planners, like complete coverage (where useful)</li>
+</ul>
+<p>All of this, and more, can be set and configured for your customized navigation logic in Nav2.</p>
+<div class="grid cards bottom-align">
 <ul>
 <li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"></path></svg></span> <strong>Introduction To Nav2 Specific Nodes</strong></p>
@@ -20416,7 +20447,7 @@ in overrides/partials/header.html -->
 </ul>
 </div>
 <p><span class="section-title">Provided Nav2 Behavior Trees</span></p>
-<div class="grid cards">
+<div class="grid cards bottom-align">
 <ul>
 <li>
 <p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"></path></svg></span> <strong>Navigate To Pose</strong></p>
@@ -20462,37 +20493,6 @@ in overrides/partials/header.html -->
 </li>
 </ul>
 </div>
-<p>Nav2 is an incredibly reconfigurable project. It allows users to set many different plugin types, across behavior trees, core algorithms, status checkers, and more!
-This section highlights some of the example behavior tree xml files provided by default in the project to do interesting tasks.
-It should be noted that these can be modified for your specific application, or used as a guide to building your own application-specific behavior tree.
-These are some exemplary examples of how you can reconfigure your navigation behavior significantly by using behavior trees.
-Other behavior trees are provided by Nav2 in the <code>nav2_bt_navigator</code> package, but this section highlights the important ones.</p>
-<p>A <strong>very</strong> basic, but functional, navigator can be seen below.</p>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><span class="nt">&lt;root</span><span class="w"> </span><span class="na">main_tree_to_execute=</span><span class="s">"MainTree"</span><span class="nt">&gt;</span>
-</span><span id="__span-0-2"><span class="w">  </span><span class="nt">&lt;BehaviorTree</span><span class="w"> </span><span class="na">ID=</span><span class="s">"MainTree"</span><span class="nt">&gt;</span>
-</span><span id="__span-0-3"><span class="w">    </span><span class="nt">&lt;PipelineSequence</span><span class="w"> </span><span class="na">name=</span><span class="s">"NavigateWithReplanning"</span><span class="nt">&gt;</span>
-</span><span id="__span-0-4"><span class="w">      </span><span class="nt">&lt;DistanceController</span><span class="w"> </span><span class="na">distance=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
-</span><span id="__span-0-5"><span class="w">        </span><span class="nt">&lt;ComputePathToPose</span><span class="w"> </span><span class="na">goal=</span><span class="s">"{goal}"</span><span class="w"> </span><span class="na">path=</span><span class="s">"{path}"</span><span class="nt">/&gt;</span>
-</span><span id="__span-0-6"><span class="w">      </span><span class="nt">&lt;/DistanceController&gt;</span>
-</span><span id="__span-0-7"><span class="w">      </span><span class="nt">&lt;FollowPath</span><span class="w"> </span><span class="na">path=</span><span class="s">"{path}"</span><span class="nt">/&gt;</span>
-</span><span id="__span-0-8"><span class="w">    </span><span class="nt">&lt;/PipelineSequence&gt;</span>
-</span><span id="__span-0-9"><span class="w">  </span><span class="nt">&lt;/BehaviorTree&gt;</span>
-</span><span id="__span-0-10"><span class="nt">&lt;/root&gt;</span>
-</span></code></pre></div>
-<p>This behavior tree will simply plan a new path to <code>goal</code> every 1 meter (set by <code>DistanceController</code>) using <code>ComputePathToPose</code>.
-If a new path is computed on the <code>path</code> blackboard variable, <code>FollowPath</code> will take this <code>path</code> and follow it using the server's default algorithm.</p>
-<p>This tree contains:</p>
-<ul>
-<li>No recovery methods</li>
-<li>No retries on failure</li>
-<li>No selected planner or controller algorithms</li>
-<li>No nodes to contextually change settings for optimal performance</li>
-<li>No integration with automatic door, elevator, or other APIs</li>
-<li>No user provided custom BT nodes</li>
-<li>No subtrees for other behaviors like docking, following, etc.</li>
-<li>No use of other types of planners, like complete coverage (where useful)</li>
-</ul>
-<p>All of this, and more, can be set and configured for your customized navigation logic in Nav2.</p>
 
 
 
