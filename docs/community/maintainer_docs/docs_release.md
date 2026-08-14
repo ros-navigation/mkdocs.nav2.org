@@ -134,6 +134,8 @@ docs/about_and_contact
     ---
     ```
 
+    Additionally, in the released branch, update the paths to the new common pages or directories as specified in sections [2.3](#23-mkdocs-material) and [3.1](#31-remove-shared-content).
+
 ### 3.2 Update links
 
 - Update all GitHub links to point to new distribution branch where it applies.
