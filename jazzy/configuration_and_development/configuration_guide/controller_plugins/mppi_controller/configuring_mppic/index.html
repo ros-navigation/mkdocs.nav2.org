@@ -18102,6 +18102,17 @@ SUVORK5CYII=
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#open_loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        open_loop
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -21273,6 +21284,17 @@ SUVORK5CYII=
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#open_loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        open_loop
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -22557,6 +22579,13 @@ This process is then repeated a number of times and returns a converged solution
 <dt>Type: <code>bool</code> Default: <code>false</code></dt>
 <dd>
 <p>Whether to regenerate noises each iteration or use single noise distribution computed on initialization and reset. Practically, this is found to work fine since the trajectories are being sampled stochastically from a normal distribution and reduces compute jittering at run-time due to thread wake-ups to resample normal distribution.</p>
+</dd>
+</dl>
+<h3 id="open_loop"><strong><code>open_loop</code></strong><a class="headerlink" href="#open_loop" title="Permanent link"></a></h3>
+<dl>
+<dt>Type: <code>bool</code> Default: <code>false</code></dt>
+<dd>
+<p>Whether to use last command velocity or use odometry for MPPI initial state estimation. When enable, use last command velocity for MPPI initial state estimation.</p>
 </dd>
 </dl>
 <h2 id="trajectory-visualization">Trajectory Visualization<a class="headerlink" href="#trajectory-visualization" title="Permanent link"></a></h2>
