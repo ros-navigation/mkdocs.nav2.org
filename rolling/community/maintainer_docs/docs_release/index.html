@@ -20018,10 +20018,10 @@ SUVORK5CYII=
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-update-links" class="md-nav__link">
+  <a href="#31-remove-shared-content" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 Update links
+        3.1 Remove shared content
       
     </span>
   </a>
@@ -20029,10 +20029,21 @@ SUVORK5CYII=
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-review-tutorials" class="md-nav__link">
+  <a href="#32-update-links" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 Review tutorials
+        3.2 Update links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-review-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Review tutorials
       
     </span>
   </a>
@@ -20641,10 +20652,10 @@ SUVORK5CYII=
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#31-update-links" class="md-nav__link">
+  <a href="#31-remove-shared-content" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.1 Update links
+        3.1 Remove shared content
       
     </span>
   </a>
@@ -20652,10 +20663,21 @@ SUVORK5CYII=
 </li>
         
           <li class="md-nav__item">
-  <a href="#32-review-tutorials" class="md-nav__link">
+  <a href="#32-update-links" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3.2 Review tutorials
+        3.2 Update links
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-review-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Review tutorials
       
     </span>
   </a>
@@ -20853,14 +20875,63 @@ in overrides/partials/header.html -->
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><span class="nt">extra</span><span class="p">:</span>
 </span><span id="__span-4-2"><span class="w">  </span><span class="nt">ros2_distro</span><span class="p">:</span><span class="w"> </span><span class="s">"&lt;distro&gt;"</span>
 </span></code></pre></div>
-<p>Update <code>branch</code> variable in <code>macros/variables.yml</code>:</p>
+<p>Update <code>branch</code> variable and include the new cloning source in <code>macros/variables.yml</code>:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><span class="nt">github_repositories</span><span class="p">:</span>
 </span><span id="__span-5-2"><span class="w">  </span><span class="nt">navigation2</span><span class="p">:</span>
-</span><span id="__span-5-3"><span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">"ros-navigation"</span>
-</span><span id="__span-5-4"><span class="w">    </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="s">"&lt;distro&gt;"</span>
+</span><span id="__span-5-3"><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</span><span id="__span-5-4"><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">branch</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">"&lt;distro&gt;"</span>
+</span><span id="__span-5-5"><span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">...</span>
+</span><span id="__span-5-6">
+</span><span id="__span-5-7"><span class="w">  </span><span class="c1"># This is required for point 3.1</span>
+</span><span id="__span-5-8"><span class="w">  </span><span class="nt">docs.nav2.org</span><span class="p">:</span>
+</span><span id="__span-5-9"><span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="s">"ros-navigation"</span>
+</span><span id="__span-5-10"><span class="w">    </span><span class="nt">branch</span><span class="p">:</span><span class="w"> </span><span class="s">"rolling"</span><span class="w"> </span><span class="c1"># keep unchanged between distributions</span>
+</span><span id="__span-5-11"><span class="w">    </span><span class="nt">destination_dir</span><span class="p">:</span><span class="w"> </span><span class="s">"macros/cache"</span>
+</span><span id="__span-5-12"><span class="w">    </span><span class="nt">data_to_clone</span><span class="p">:</span>
+</span><span id="__span-5-13"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"/docs/index.md"</span>
+</span><span id="__span-5-14"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"/docs/images"</span>
+</span><span id="__span-5-15"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"/docs/videos"</span>
+</span><span id="__span-5-16"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"/docs/community"</span>
+</span><span id="__span-5-17"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"/docs/robots_using"</span>
+</span><span id="__span-5-18"><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"/docs/about_and_contact"</span>
+</span><span id="__span-5-19"><span class="w">    </span><span class="nt">symlinks</span><span class="p">:</span>
+</span><span id="__span-5-20"><span class="w">      </span><span class="s">"docs/index.md"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">"macros/cache/docs.nav2.org/docs/index.md"</span>
+</span><span id="__span-5-21"><span class="w">      </span><span class="s">"docs/images"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">"macros/cache/docs.nav2.org/docs/images"</span>
+</span><span id="__span-5-22"><span class="w">      </span><span class="s">"docs/videos"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">"macros/cache/docs.nav2.org/docs/videos"</span>
+</span><span id="__span-5-23"><span class="w">      </span><span class="s">"docs/community"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">"macros/cache/docs.nav2.org/docs/community"</span>
+</span><span id="__span-5-24"><span class="w">      </span><span class="s">"docs/robots_using"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">"macros/cache/docs.nav2.org/docs/robots_using"</span>
+</span><span id="__span-5-25"><span class="w">      </span><span class="s">"docs/about_and_contact"</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">"macros/cache/docs.nav2.org/docs/about_and_contact"</span>
 </span></code></pre></div>
 <h2 id="3-update-documentation">3. Update Documentation<a class="headerlink" href="#3-update-documentation" title="Permanent link"></a></h2>
-<h3 id="31-update-links">3.1 Update links<a class="headerlink" href="#31-update-links" title="Permanent link"></a></h3>
+<h3 id="31-remove-shared-content">3.1 Remove shared content<a class="headerlink" href="#31-remove-shared-content" title="Permanent link"></a></h3>
+<p>Delete the following directories and files that are shared across multiple documentation distributions:</p>
+<ul>
+<li><code>docs/index.md</code></li>
+<li><code>docs/images</code></li>
+<li><code>docs/videos</code></li>
+<li><code>docs/community</code></li>
+<li><code>docs/robots_using</code></li>
+<li><code>docs/about_and_contact</code></li>
+</ul>
+<p>Include them in <code>.gitignore</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"># For non-rolling branches only
+</span><span id="__span-6-2">docs/index.md
+</span><span id="__span-6-3">docs/images
+</span><span id="__span-6-4">docs/videos
+</span><span id="__span-6-5">docs/community
+</span><span id="__span-6-6">docs/robots_using
+</span><span id="__span-6-7">docs/about_and_contact
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If any new common pages are added, add the following metadata to the header of each shared <code>.md</code> file in the Rolling branch to use the "Edit this page" function:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1">---
+</span><span id="__span-7-2">edit_uri: https://github.com/ros-navigation/docs.nav2.org/tree/rolling/docs/
+</span><span id="__span-7-3">---
+</span></code></pre></div>
+<p>Additionally, in the released branch, update the paths to the new common pages or directories as specified in sections <a href="#23-mkdocs-material">2.3</a> and <a href="#31-remove-shared-content">3.1</a>.</p>
+</div>
+<h3 id="32-update-links">3.2 Update links<a class="headerlink" href="#32-update-links" title="Permanent link"></a></h3>
 <ul>
 <li>Update all GitHub links to point to new distribution branch where it applies.</li>
 <li>
@@ -20874,19 +20945,19 @@ in overrides/partials/header.html -->
 <p><strong>Lyrical</strong>: <a href="https://docs.ros.org/en/lyrical/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html">https://docs.ros.org/en/lyrical/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html</a></p>
 </li>
 </ul>
-<h3 id="32-review-tutorials">3.2 Review tutorials<a class="headerlink" href="#32-review-tutorials" title="Permanent link"></a></h3>
+<h3 id="33-review-tutorials">3.3 Review tutorials<a class="headerlink" href="#33-review-tutorials" title="Permanent link"></a></h3>
 <p>Review <a class="autorefs autorefs-internal" title="Tutorials" href="../../../tutorials/#tutorials">tutorials</a> for compatibility with the new distribution, including API and behavior changes.</p>
 <h2 id="4-build-and-publish-documentation">4. Build and Publish Documentation<a class="headerlink" href="#4-build-and-publish-documentation" title="Permanent link"></a></h2>
 <p>Once all the changes are made, use the command below to check the build:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1">sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip<span class="w"> </span>python3-venv
-</span><span id="__span-6-2">python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
-</span><span id="__span-6-3"><span class="nb">source</span><span class="w"> </span>venv/bin/activate
-</span><span id="__span-6-4">pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</span><span id="__span-6-5">mkdocs<span class="w"> </span>build
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1">sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip<span class="w"> </span>python3-venv
+</span><span id="__span-8-2">python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</span><span id="__span-8-3"><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+</span><span id="__span-8-4">pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span><span id="__span-8-5">mkdocs<span class="w"> </span>build
 </span></code></pre></div>
 <p>Refer to <a href="https://github.com/ros-navigation/docs.nav2.org/blob/master/README.md">README.md</a> for additional commands, such as previewing multiple versions locally before publishing.</p>
 <p>Publish the documentation to the new distribution branch:</p>
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-7-1">git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;distro&gt;
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-9-1">git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>&lt;distro&gt;
 </span></code></pre></div>
 <h2 id="5-mark-branch-as-protected">5. Mark Branch as Protected<a class="headerlink" href="#5-mark-branch-as-protected" title="Permanent link"></a></h2>
 <p>Go to the Repo Settings -&gt; Branches. Create a branch protection rule for the new branch that matches the last.</p>
