@@ -22725,63 +22725,63 @@ that fall inside an enabled zone are removed before the action polygons are eval
 <h2 id="collision-monitor-exclusion-zones-parameters">Exclusion zones parameters<a class="headerlink" href="#collision-monitor-exclusion-zones-parameters" title="Permanent link"></a></h2>
 <p><code>&lt;zone name&gt;</code> is a parameter block referenced by name from a source's <code>exclusion_zones</code> list. Zone names are global across the node.
 Exclusion zones remove (mask out) a source's points and never trigger an action. Each zone inherits the owning source's <code>base_shift_correction</code> policy.</p>
-<h3 id="zone-nametype"><strong><code>&lt;zone name&gt;</code>.type</strong><a class="headerlink" href="#zone-nametype" title="Permanent link"></a></h3>
+<h3 id="zone-nametype"><strong><code>&lt;zone name&gt;.type</code></strong><a class="headerlink" href="#zone-nametype" title="Permanent link"></a></h3>
 <dl>
 <dt>Type: <code>string</code> Default: <code>"polygon"</code></dt>
 <dd>
 <p>Type of zone shape. Available values are <code>"polygon"</code> and <code>"circle"</code>.</p>
 </dd>
 </dl>
-<h3 id="zone-namepoints"><strong><code>&lt;zone name&gt;</code>.points</strong><a class="headerlink" href="#zone-namepoints" title="Permanent link"></a></h3>
+<h3 id="zone-namepoints"><strong><code>&lt;zone name&gt;.points</code></strong><a class="headerlink" href="#zone-namepoints" title="Permanent link"></a></h3>
 <dl>
 <dt>Type: <code>string</code> Default: <code>""</code></dt>
 <dd>
 <p>Zone polygon vertices, listed in <code>"[[p1.x, p1.y], [p2.x, p2.y], [p3.x, p3.y], ...]"</code> format, expressed in <code>frame_id</code>. Used for <code>"polygon"</code> type. Minimum 3 points. Causes an error, if invalid for a <code>"polygon"</code> zone.</p>
 </dd>
 </dl>
-<h3 id="zone-nameradius"><strong><code>&lt;zone name&gt;</code>.radius</strong><a class="headerlink" href="#zone-nameradius" title="Permanent link"></a></h3>
+<h3 id="zone-nameradius"><strong><code>&lt;zone name&gt;.radius</code></strong><a class="headerlink" href="#zone-nameradius" title="Permanent link"></a></h3>
 <dl>
 <dt>Type: <code>double</code> Default: <code>N/A</code></dt>
 <dd>
 <p>Circle radius. Used for <code>"circle"</code> type. Must be greater than <code>0</code>. Causes an error, if not specified for a <code>"circle"</code> zone.</p>
 </dd>
 </dl>
-<h3 id="zone-nameframe_id"><strong><code>&lt;zone name&gt;</code>.frame_id</strong><a class="headerlink" href="#zone-nameframe_id" title="Permanent link"></a></h3>
+<h3 id="zone-nameframe_id"><strong><code>&lt;zone name&gt;.frame_id</code></strong><a class="headerlink" href="#zone-nameframe_id" title="Permanent link"></a></h3>
 <dl>
 <dt>Type: <code>string</code> Default: (node parameter <code>base_frame_id</code>)</dt>
 <dd>
 <p>Frame the zone shape is anchored to and tracked via TF (e.g. <code>dock_link</code>). Leaving it empty, or equal to the base frame, makes a static, robot-relative zone.</p>
 </dd>
 </dl>
-<h3 id="zone-nameframe_hold_timeout"><strong><code>&lt;zone name&gt;</code>.frame_hold_timeout</strong><a class="headerlink" href="#zone-nameframe_hold_timeout" title="Permanent link"></a></h3>
+<h3 id="zone-nameframe_hold_timeout"><strong><code>&lt;zone name&gt;.frame_hold_timeout</code></strong><a class="headerlink" href="#zone-nameframe_hold_timeout" title="Permanent link"></a></h3>
 <dl>
 <dt>Type: <code>double</code> Default: <code>0.0</code></dt>
 <dd>
 <p>Extra time (in seconds) beyond <code>transform_tolerance</code> that the last known pose of a stale zone <code>frame_id</code> keeps being used before the zone fails safe and stops masking points. While held, the zone is frozen at its last valid pose in the <code>odom_frame_id</code> frame, so it stays world-fixed even if the robot moves. Useful to ride out brief detection dropouts of a marker-based zone frame. <code>0.0</code> means only the transform tolerance applies.</p>
 </dd>
 </dl>
-<h3 id="zone-namemin_height"><strong><code>&lt;zone name&gt;</code>.min_height</strong><a class="headerlink" href="#zone-namemin_height" title="Permanent link"></a></h3>
+<h3 id="zone-namemin_height"><strong><code>&lt;zone name&gt;.min_height</code></strong><a class="headerlink" href="#zone-namemin_height" title="Permanent link"></a></h3>
 <dl>
 <dt>Type: <code>double</code> Default: <code>-inf</code></dt>
 <dd>
 <p>Lower bound (in the base frame <code>z</code>) of the height band a point must be within to be masked. Unbounded by default so 2D sources are fully covered.</p>
 </dd>
 </dl>
-<h3 id="zone-namemax_height"><strong><code>&lt;zone name&gt;</code>.max_height</strong><a class="headerlink" href="#zone-namemax_height" title="Permanent link"></a></h3>
+<h3 id="zone-namemax_height"><strong><code>&lt;zone name&gt;.max_height</code></strong><a class="headerlink" href="#zone-namemax_height" title="Permanent link"></a></h3>
 <dl>
 <dt>Type: <code>double</code> Default: <code>+inf</code></dt>
 <dd>
 <p>Upper bound (in the base frame <code>z</code>) of the height band a point must be within to be masked. Unbounded by default so 2D sources are fully covered.</p>
 </dd>
 </dl>
-<h3 id="zone-nameenabled"><strong><code>&lt;zone name&gt;</code>.enabled</strong><a class="headerlink" href="#zone-nameenabled" title="Permanent link"></a></h3>
+<h3 id="zone-nameenabled"><strong><code>&lt;zone name&gt;.enabled</code></strong><a class="headerlink" href="#zone-nameenabled" title="Permanent link"></a></h3>
 <dl>
 <dt>Type: <code>bool</code> Default: <code>false</code></dt>
 <dd>
 <p>Whether this zone actively masks points. (Can be dynamically set)</p>
 </dd>
 </dl>
-<h3 id="zone-namevisualize"><strong><code>&lt;zone name&gt;</code>.visualize</strong><a class="headerlink" href="#zone-namevisualize" title="Permanent link"></a></h3>
+<h3 id="zone-namevisualize"><strong><code>&lt;zone name&gt;.visualize</code></strong><a class="headerlink" href="#zone-namevisualize" title="Permanent link"></a></h3>
 <dl>
 <dt>Type: <code>bool</code> Default: <code>false</code></dt>
 <dd>

@@ -20803,11 +20803,13 @@ in overrides/partials/header.html -->
 <dd>
 <p>Custom inscribed radius for the robot which overwrites the default footprint-based calculated one.
 If set to a negative value, the default inscribed radius of the robot is used.</p>
-<p><strong>POTENTIAL SAFETY ISSUE!</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">POTENTIAL SAFETY ISSUE!</p>
 <p>Make sure you fully understand the consequences of changing the inscribed radius!
 This can have serious implications on the robot's safety and is not recommended unless specifically needed.
 This practice is intended only for controllers that are customized explicitly to feed on such data.
 It is NOT intended for global path planners or setups that depend on the footprint-based inscribed radius!</p>
+</div>
 </dd>
 </dl>
 <h3 id="inflation-layercost_scaling_factor"><strong><code>&lt;inflation layer&gt;.cost_scaling_factor</code></strong><a class="headerlink" href="#inflation-layercost_scaling_factor" title="Permanent link"></a></h3>
