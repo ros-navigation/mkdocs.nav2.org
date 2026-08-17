@@ -17,6 +17,22 @@ To update these synchronized items, edit only the `rolling` branch. Changes from
 ## Page autogeneration
 
 The documentation uses the [macros](https://github.com/fralau/mkdocs-macros-plugin) plugin to automatically generate documentation for Behavior Tree (BT) Node ports and their XML examples.
+
+To add or update XML examples, modify them in the Doxygen comments of the hpp files located in `navigation2/nav2_behavior_tree/include/nav2_behavior_tree/plugins/` using the following format:
+```
+/**
+ * ...
+ * Usage in XML:
+ * @code
+ * ...
+ * @endcode
+ */
+```
+
+To update the nodes and ports information, modify the `navigation2/nav2_behavior_tree/nav2_tree_nodes.xml` file in the corresponding branch of the Nav2 repository. Note that the information in this file must match what is specified in the hpp files. Only the port descriptions may differ.
+
+Once BT Node ports or XML examples are updated, the macros plugin automatically fetches, parses, and inserts them into the documentation during the build process. This ensures the documentation stays synchronized with the source code.
+
 See [macros/README.md](../macros/README.md) for further information.
 
 ## Cross-page references
