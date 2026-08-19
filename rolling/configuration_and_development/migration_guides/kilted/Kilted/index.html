@@ -16089,7 +16089,7 @@ SUVORK5CYII=
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../configuration_guide/core_servers/costmap_2d/costmap_filters/zone_parameter_filter/" class="md-nav__link">
+      <a href="../../../configuration_guide/core_servers/costmap_2d/costmap_filters/zone_parameter_filter/zone_parameter_filter/" class="md-nav__link">
         
   
 
@@ -23010,7 +23010,11 @@ That means <code>goal_received_callback</code> can now be used to check incoming
 This makes invalid requests fail earlier, avoids unnecessary execution spin-up, and cleanly rejects unsupported goals.</p>
 <p>Additionally, <code>BtActionServer</code> now reports <code>GOAL_REJECTED</code> (instead of <code>UNKNOWN</code>) when execution cannot start due to a missing current goal.</p>
 <h2 id="new-zoneparameterfilter-costmap-filter">New ZoneParameterFilter Costmap Filter<a class="headerlink" href="#new-zoneparameterfilter-costmap-filter" title="Permanent link"></a></h2>
-<p><a href="https://github.com/ros-navigation/navigation2/pull/6104">PR #6104</a> adds a new <code>ZoneParameterFilter</code> costmap filter that sets ROS parameters on other nodes based on the robot's position using a filter mask. Each mask value selects a declared state carrying parameter setpoints, for example a lower <code>FollowPath.max_vel_x</code> inside a snow zone. Leaving all zones, or entering a zone with mask value <code>0</code>, restores the declared <code>nominal_defaults</code>. Every state transition is published as <code>std_msgs/UInt8</code> on the <code>state_event_topic</code>. See the <a class="autorefs autorefs-internal" href="../../../configuration_guide/core_servers/costmap_2d/costmap_filters/zone_parameter_filter/#zone-parameter-filter-parameters">Zone Parameter Filter Parameters</a> configuration page for the parameters and an example, and the <a class="autorefs autorefs-internal" href="../../../../tutorials/general_tutorials/navigation2_with_zone_parameter_filter/#navigating-with-zone-parameter-overrides">Navigating with Zone Parameter Overrides</a> tutorial.</p>
+<p><a href="https://github.com/ros-navigation/navigation2/pull/6104">PR #6104</a> adds a new <code>ZoneParameterFilter</code> costmap filter that sets ROS parameters on other nodes based on the robot's position using a filter mask. Each mask value selects a declared state carrying parameter setpoints, for example a lower <code>FollowPath.max_vel_x</code> inside a snow zone. Leaving all zones, or entering a zone with mask value <code>0</code>, restores the declared <code>nominal_defaults</code>. Every state transition is published as <code>std_msgs/UInt8</code> on the <code>state_event_topic</code>. See the <a class="autorefs autorefs-internal" href="../../../configuration_guide/core_servers/costmap_2d/costmap_filters/zone_parameter_filter/zone_parameter_filter/#zone-parameter-filter-parameters">Zone Parameter Filter Parameters</a> configuration page for the parameters and an example, and the <a class="autorefs autorefs-internal" href="../../../../tutorials/general_tutorials/navigation2_with_zone_parameter_filter/#navigating-with-zone-parameter-overrides">Navigating with Zone Parameter Overrides</a> tutorial.</p>
+<figure>
+  <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../../../configuration_guide/core_servers/costmap_2d/costmap_filters/zone_parameter_filter/assets/zone_parameter_filter_demo.gif" data-desc-position="bottom"><img alt="A single zone raising inflation_radius on the local and global costmap nodes, with a panel tracking both parameter values" src="../../../configuration_guide/core_servers/costmap_2d/costmap_filters/zone_parameter_filter/assets/zone_parameter_filter_demo.gif" title="A single zone raising inflation_radius on the local and global costmap nodes, with a panel tracking both parameter values" width="960px"></a>
+</figure>
+<p>GIF above shows one filter instance raising <code>inflation_layer.inflation_radius</code> on both costmap nodes on entry to a single zone, and restoring the <code>nominal_defaults</code> on the way out. The scene is a simulation, with a synthetic map and a scripted <code>base_link</code> transform.</p>
 
 
 

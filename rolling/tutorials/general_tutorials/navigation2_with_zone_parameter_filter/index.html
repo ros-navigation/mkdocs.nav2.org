@@ -16254,7 +16254,7 @@ SUVORK5CYII=
   <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
-      <a href="../../../configuration_and_development/configuration_guide/core_servers/costmap_2d/costmap_filters/zone_parameter_filter/" class="md-nav__link">
+      <a href="../../../configuration_and_development/configuration_guide/core_servers/costmap_2d/costmap_filters/zone_parameter_filter/zone_parameter_filter/" class="md-nav__link">
         
   
 
@@ -20932,7 +20932,7 @@ in overrides/partials/header.html -->
 </span><span id="__span-6-39"><span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2.0</span>
 </span></code></pre></div>
 <p>On a transition between two zones the filter first resets the parameters set by the previous state but not by the new one back to their nominal defaults, then applies the new state's setpoints, batched per target node. The updates are issued asynchronously, so the costmap update loop is not blocked. An update that fails or is rejected by the target node makes the filter throw instead of continuing silently. Every state change is also published as a <code>std_msgs/UInt8</code> message on the topic set by the <code>state_event_topic</code> parameter (default: <code>zone_filter_state</code>).</p>
-<p>Full list of parameters supported by <code>ZoneParameterFilter</code> are listed at <a class="autorefs autorefs-internal" href="../../../configuration_and_development/configuration_guide/core_servers/costmap_2d/costmap_filters/zone_parameter_filter/#zone-parameter-filter-parameters">Zone Parameter Filter Parameters</a> page.</p>
+<p>Full list of parameters supported by <code>ZoneParameterFilter</code> are listed at <a class="autorefs autorefs-internal" href="../../../configuration_and_development/configuration_guide/core_servers/costmap_2d/costmap_filters/zone_parameter_filter/zone_parameter_filter/#zone-parameter-filter-parameters">Zone Parameter Filter Parameters</a> page.</p>
 <h3 id="4-run-nav2-stack">4. Run Nav2 stack<a class="headerlink" href="#4-run-nav2-stack" title="Permanent link"></a></h3>
 <p>Run Nav2 with the modified parameters file:</p>
 <p></p><div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1">ros2<span class="w"> </span>launch<span class="w"> </span>nav2_bringup<span class="w"> </span>tb4_simulation_launch.py<span class="w"> </span>params_file:<span class="o">=</span>/path/to/nav2_params.yaml
