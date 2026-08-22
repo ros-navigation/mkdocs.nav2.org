@@ -15253,6 +15253,17 @@ SUVORK5CYII=
 </li>
         
           <li class="md-nav__item">
+  <a href="#nav2_controller-plugindirection_estimation_distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;nav2_controller plugin&gt;.direction_estimation_distance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#nav2_controller-pluginis_overshoot_valid" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -20554,6 +20565,17 @@ SUVORK5CYII=
 </li>
         
           <li class="md-nav__item">
+  <a href="#nav2_controller-plugindirection_estimation_distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        &lt;nav2_controller plugin&gt;.direction_estimation_distance
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#nav2_controller-pluginis_overshoot_valid" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -20705,7 +20727,7 @@ in overrides/partials/header.html -->
 
 <!-- Page content -->
 <h1 id="axis-goal-checker">AxisGoalChecker<a class="headerlink" href="#axis-goal-checker" title="Permanent link"></a></h1>
-<p>Checks whether the robot has reached the goal pose by projecting the robot's position onto the path direction defined by the last segment of the path. This goal checker uses the last two poses of the path (<code>before_goal_pose</code> and <code>goal_pose</code>) to determine the path direction and then checks if the robot is within tolerance along that axis.</p>
+<p>Checks whether the robot has reached the goal pose by projecting the robot's position onto the path direction near the goal. This goal checker estimates the path direction from the <code>goal_pose</code> and the first plan pose at least <code>direction_estimation_distance</code> behind it, then checks if the robot is within tolerance along that axis.</p>
 <p>Unlike simple distance-based goal checkers, the AxisGoalChecker allows independent control of tolerances along the path direction (<code>along_path_tolerance</code>) and perpendicular to it (<code>cross_track_tolerance</code>). This is particularly useful for applications where precise alignment along a specific axis is more important than radial distance from the goal.</p>
 <figure>
   <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/axis_goal_checker.png" data-desc-position="bottom"><img alt="AxisGoalChecker Illustration" src="../assets/axis_goal_checker.png" title="AxisGoalChecker Illustration"></a>
@@ -20731,6 +20753,13 @@ in overrides/partials/header.html -->
 <dt>Type: <code>double</code> Default: <code>1.0</code></dt>
 <dd>
 <p>Maximum path length to consider for goal checking (m). If the remaining path length exceeds this value, the goal check is skipped. This prevents premature goal acceptance when far from the goal.</p>
+</dd>
+</dl>
+<h3 id="nav2_controller-plugindirection_estimation_distance"><strong><code>&lt;nav2_controller plugin&gt;.direction_estimation_distance</code></strong><a class="headerlink" href="#nav2_controller-plugindirection_estimation_distance" title="Permanent link"></a></h3>
+<dl>
+<dt>Type: <code>double</code> Default: <code>0.15</code></dt>
+<dd>
+<p>Distance back along the plan, from the goal, used to estimate the approach direction (m). The checker walks back from the goal and uses the first pose at least this far away as the direction reference. Larger values are more robust to erroneous end-of-plan poses and sharp final turns, but average the direction over a longer segment. Must be greater than <code>0</code> and less than <code>path_length_tolerance</code>.</p>
 </dd>
 </dl>
 <h3 id="nav2_controller-pluginis_overshoot_valid"><strong><code>&lt;nav2_controller plugin&gt;.is_overshoot_valid</code></strong><a class="headerlink" href="#nav2_controller-pluginis_overshoot_valid" title="Permanent link"></a></h3>
